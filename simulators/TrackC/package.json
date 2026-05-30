@@ -1,0 +1,26 @@
+{
+  "name": "uniqa-coach",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "profiles:sample": "node scripts/sample-profiles.mjs",
+    "persona:gen": "node scripts/persona-generator.mjs",
+    "persona:prompts": "node scripts/generate-system-prompts.mjs",
+    "agent:interactive": "node scripts/run-interactive-agent.mjs",
+    "agent:analyze": "node scripts/analyze-interactive-sessions.mjs",
+    "export:zip": "bash scripts/export-package.sh"
+  },
+  "dependencies": {
+    "lucide-react": "^1.17.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "vite": "^8.0.12"
+  }
+}

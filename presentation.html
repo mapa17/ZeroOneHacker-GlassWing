@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Glass Wing — UNIQA Coach Project</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:       #0d1117;
+    --surface:  #161b22;
+    --border:   #30363d;
+    --accent:   #58a6ff;
+    --accent2:  #3fb950;
+    --accent3:  #f78166;
+    --accent4:  #d2a8ff;
+    --text:     #e6edf3;
+    --muted:    #8b949e;
+    --card:     #21262d;
+  }
+
+  html, body {
+    width: 100%; height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  /* ── Deck ── */
+  #deck { width: 100%; height: 100%; position: relative; }
+
+  .slide {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    padding: 48px 80px;
+    opacity: 0; pointer-events: none;
+    transition: opacity .35s ease;
+  }
+  .slide.active { opacity: 1; pointer-events: all; }
+
+  /* ── Nav ── */
+  #nav {
+    position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 10px; align-items: center; z-index: 100;
+  }
+  .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--border); cursor: pointer;
+    transition: background .2s, transform .2s;
+  }
+  .dot.active { background: var(--accent); transform: scale(1.4); }
+
+  #nav-btns {
+    position: fixed; bottom: 20px; right: 32px;
+    display: flex; gap: 8px; z-index: 100;
+  }
+  .nav-btn {
+    background: var(--surface); border: 1px solid var(--border);
+    color: var(--text); padding: 6px 14px; border-radius: 6px;
+    cursor: pointer; font-size: 13px; transition: background .15s;
+  }
+  .nav-btn:hover { background: var(--card); }
+  #slide-counter {
+    position: fixed; bottom: 28px; left: 32px;
+    font-size: 12px; color: var(--muted); z-index: 100;
+  }
+
+  /* ── Typography ── */
+  .eyebrow {
+    font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600; margin-bottom: 12px;
+  }
+  h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 700; line-height: 1.1; }
+  h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 700; }
+  h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 6px; }
+  p, li { font-size: clamp(.85rem, 1.4vw, 1rem); line-height: 1.7; color: var(--muted); }
+  strong { color: var(--text); }
+
+  /* ── Layout helpers ── */
+  .col   { display: flex; flex-direction: column; gap: 16px; }
+  .row   { display: flex; gap: 32px; align-items: flex-start; width: 100%; }
+  .card  {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px;
+    flex: 1;
+  }
+  .tag {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    letter-spacing: .06em; padding: 3px 10px; border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  .tag-blue   { background: rgba(88,166,255,.15); color: var(--accent); }
+  .tag-green  { background: rgba(63,185,80,.15);  color: var(--accent2); }
+  .tag-orange { background: rgba(247,129,102,.15); color: var(--accent3); }
+  .tag-purple { background: rgba(210,168,255,.15); color: var(--accent4); }
+
+  ul { padding-left: 1.2em; }
+  li { margin-bottom: 6px; }
+
+  /* ── Slide 1 — Title ── */
+  #s1 { text-align: center; gap: 16px; }
+  #s1 .logo {
+    font-size: 3rem; margin-bottom: 8px;
+    filter: drop-shadow(0 0 24px rgba(88,166,255,.5));
+  }
+  #s1 h1 { background: linear-gradient(135deg, var(--accent), var(--accent4));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  #s1 .subtitle { font-size: 1.1rem; color: var(--muted); max-width: 560px; }
+  .hackathon-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid var(--border); border-radius: 20px;
+    padding: 6px 16px; font-size: .85rem; color: var(--muted);
+    margin-top: 8px;
+  }
+  .hackathon-badge span { color: var(--accent); font-weight: 600; }
+
+  /* ── Slide 2 — Team ── */
+  .team-grid { display: flex; gap: 32px; justify-content: center; margin-top: 8px; }
+  .member {
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+    width: 180px;
+  }
+  .avatar {
+    width: 100px; height: 100px; border-radius: 50%;
+    border: 2px solid var(--border);
+    background: var(--card);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.4rem; color: var(--muted);
+    overflow: hidden;
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .member-name { font-weight: 600; font-size: .95rem; }
+  .member-role { font-size: .8rem; color: var(--muted); text-align: center; }
+
+  /* ── Slide 3 — Architecture ── */
+  #arch-svg { width: 100%; max-width: 860px; }
+
+  /* ── Slide 7 — Parallel tracks ── */
+  .track-label {
+    font-size: 1.8rem; font-weight: 800;
+    line-height: 1; margin-bottom: 8px;
+  }
+
+  /* ── Slide 8 — Results ── */
+  .result-placeholder {
+    width: 100%; min-height: 80px;
+    border: 1px dashed var(--border); border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: .85rem; font-style: italic;
+    margin-top: 8px;
+  }
+
+  /* ── Slide 10 — Thank you ── */
+  #s10 { text-align: center; gap: 20px; }
+  #s10 h1 { font-size: clamp(3rem, 7vw, 6rem); }
+  .wing {
+    font-size: 4rem;
+    animation: flutter 3s ease-in-out infinite;
+  }
+  @keyframes flutter {
+    0%,100% { transform: rotate(-5deg) scale(1); }
+    50%      { transform: rotate(5deg) scale(1.08); }
+  }
+
+  /* ── divider ── */
+  .divider { width: 48px; height: 3px; border-radius: 2px;
+             background: var(--accent); margin: 12px 0; }
+</style>
+</head>
+<body>
+
+<div id="deck">
+
+  <!-- ─── 1. TITLE ─────────────────────────────────────────────── -->
+  <div class="slide active" id="s1">
+    <div class="logo">🦋</div>
+    <div class="eyebrow">Zero One Hacker 2026</div>
+    <h1>Team Glass Wing</h1>
+    <p class="subtitle">
+      Simulating customer journeys through an insurance funnel —<br>
+      with LLM-driven customers, a real web form, and an adaptive coach.
+    </p>
+    <div class="hackathon-badge">
+      <span>UNIQA</span> Privatarzt Online Funnel · Drop-off Analysis
+    </div>
+  </div>
+
+  <!-- ─── 2. TEAM ───────────────────────────────────────────────── -->
+  <div class="slide" id="s2">
+    <div class="col" style="align-items:center; gap:32px;">
+      <div class="col" style="align-items:center; gap:4px;">
+        <div class="eyebrow">The Team</div>
+        <h2>Three people, one funnel</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="team-grid">
+        <div class="member">
+          <div class="avatar" id="av1">
+            <img src="../../docs/Vladislav_Dolgov.webp" alt="Vladislav Dolgov">
+          </div>
+          <div class="member-name">Vladislav Dolgov</div>
+        </div>
+        <div class="member">
+          <div class="avatar" id="av2">
+            <img src="../../docs/Vladyslav_Shundryk.webp" alt="Vladyslav Shundryk">
+          </div>
+          <div class="member-name">Vladyslav Shundryk</div>
+        </div>
+        <div class="member">
+          <div class="avatar" id="av3">
+            <img src="../../docs/Pasieka_Manuel.png" alt="Manuel Pasieka">
+          </div>
+          <div class="member-name">Manuel Pasieka</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── 3. ARCHITECTURE ──────────────────────────────────────── -->
+  <div class="slide" id="s3">
+    <div class="col" style="align-items:center; gap:24px; width:100%;">
+      <div class="col" style="align-items:center; gap:4px;">
+        <div class="eyebrow">System Overview</div>
+        <h2>Three simulated components</h2>
+        <div class="divider"></div>
+      </div>
+      <svg id="arch-svg" viewBox="0 0 860 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Form box -->
+        <rect x="330" y="90" width="200" height="160" rx="12"
+              fill="#21262d" stroke="#30363d" stroke-width="1.5"/>
+        <text x="430" y="130" text-anchor="middle" fill="#58a6ff"
+              font-family="system-ui" font-size="13" font-weight="700">WEB FORM</text>
+        <text x="430" y="150" text-anchor="middle" fill="#8b949e"
+              font-family="system-ui" font-size="11">UNIQA Privatarzt</text>
+        <!-- form lines -->
+        <rect x="356" y="168" width="148" height="8"  rx="3" fill="#30363d"/>
+        <rect x="356" y="183" width="100" height="8"  rx="3" fill="#30363d"/>
+        <rect x="356" y="198" width="120" height="8"  rx="3" fill="#30363d"/>
+        <rect x="356" y="215" width="80"  height="16" rx="4" fill="#58a6ff" opacity=".5"/>
+        <text x="396" y="227" text-anchor="middle" fill="#e6edf3"
+              font-family="system-ui" font-size="9">Weiter →</text>
+
+        <!-- Customer box -->
+        <rect x="30" y="110" width="210" height="120" rx="12"
+              fill="#21262d" stroke="#3fb950" stroke-width="1.5"/>
+        <text x="135" y="145" text-anchor="middle" fill="#3fb950"
+              font-family="system-ui" font-size="13" font-weight="700">CUSTOMER SIM</text>
+        <text x="135" y="163" text-anchor="middle" fill="#8b949e"
+              font-family="system-ui" font-size="11">LLM-driven persona</text>
+        <text x="135" y="178" text-anchor="middle" fill="#8b949e"
+              font-family="system-ui" font-size="11">Fills the form step-by-step</text>
+        <text x="135" y="200" text-anchor="middle" fill="#8b949e"
+              font-family="system-ui" font-size="10">Judith · Franz · Peter</text>
+        <text x="135" y="218" text-anchor="middle" fill="#8b949e"
+              font-family="system-ui" font-size="10">+ sampled attributes</text>
+
+        <!-- Coach box -->
+        <rect x="620" y="110" width="210" height="120" rx="12"
+              fill="#21262d" stroke="#d2a8ff" stroke-width="1.5"/>
+        <text x="725" y="145" text-anchor="middle" fill="#d2a8ff"
+              font-family="system-ui" font-size="13" font-weight="700">COACH SIM</text>
+        <text x="725" y="163" text-anchor="middle" fill="#8b949e"
+              font-family="system-ui" font-size="11">LLM-driven observer</text>
+        <text x="725" y="178" text-anchor="middle" fill="#8b949e"
+              font-family="system-ui" font-size="11">Nudges toward online</text>
+        <text x="725" y="200" text-anchor="middle" fill="#8b949e"
+              font-family="system-ui" font-size="10">Watches every action</text>
+        <text x="725" y="218" text-anchor="middle" fill="#8b949e"
+              font-family="system-ui" font-size="10">Adapts to persona type</text>
+
+        <!-- Customer → Form arrow -->
+        <path d="M240 170 L330 170" stroke="#3fb950" stroke-width="1.5"
+              stroke-dasharray="5,3" marker-end="url(#arrowG)"/>
+        <text x="285" y="160" text-anchor="middle" fill="#3fb950"
+              font-family="system-ui" font-size="10">actions</text>
+
+        <!-- Form → Customer arrow (page state) -->
+        <path d="M330 195 L240 195" stroke="#58a6ff" stroke-width="1.5"
+              stroke-dasharray="5,3" marker-end="url(#arrowB)"/>
+        <text x="285" y="215" text-anchor="middle" fill="#58a6ff"
+              font-family="system-ui" font-size="10">page state</text>
+
+        <!-- Form → Coach arrow -->
+        <path d="M530 170 L620 170" stroke="#d2a8ff" stroke-width="1.5"
+              stroke-dasharray="5,3" marker-end="url(#arrowP)"/>
+        <text x="575" y="160" text-anchor="middle" fill="#d2a8ff"
+              font-family="system-ui" font-size="10">observations</text>
+
+        <!-- Coach → Form arrow -->
+        <path d="M620 195 L530 195" stroke="#f78166" stroke-width="1.5"
+              stroke-dasharray="5,3" marker-end="url(#arrowO)"/>
+        <text x="575" y="215" text-anchor="middle" fill="#f78166"
+              font-family="system-ui" font-size="10">coach msg</text>
+
+        <!-- LLM pills -->
+        <rect x="72" y="260" width="124" height="24" rx="12"
+              fill="rgba(63,185,80,.12)" stroke="#3fb950" stroke-width="1"/>
+        <text x="134" y="276" text-anchor="middle" fill="#3fb950"
+              font-family="system-ui" font-size="10" font-weight="600">OpenAI LLM</text>
+
+        <rect x="661" y="260" width="124" height="24" rx="12"
+              fill="rgba(210,168,255,.12)" stroke="#d2a8ff" stroke-width="1"/>
+        <text x="723" y="276" text-anchor="middle" fill="#d2a8ff"
+              font-family="system-ui" font-size="10" font-weight="600">OpenAI LLM</text>
+
+        <!-- Persona pill -->
+        <rect x="55" y="44" width="160" height="24" rx="12"
+              fill="rgba(63,185,80,.08)" stroke="#3fb950" stroke-width="1" stroke-dasharray="4,2"/>
+        <text x="135" y="60" text-anchor="middle" fill="#3fb950"
+              font-family="system-ui" font-size="10">Sampled persona profile</text>
+        <path d="M135 68 L135 110" stroke="#3fb950" stroke-width="1" stroke-dasharray="3,2"/>
+
+        <rect x="645" y="44" width="160" height="24" rx="12"
+              fill="rgba(210,168,255,.08)" stroke="#d2a8ff" stroke-width="1" stroke-dasharray="4,2"/>
+        <text x="725" y="60" text-anchor="middle" fill="#d2a8ff"
+              font-family="system-ui" font-size="10">Persona archetypes + goals</text>
+        <path d="M725 68 L725 110" stroke="#d2a8ff" stroke-width="1" stroke-dasharray="3,2"/>
+
+        <!-- Arrow markers -->
+        <defs>
+          <marker id="arrowG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#3fb950"/>
+          </marker>
+          <marker id="arrowB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#58a6ff"/>
+          </marker>
+          <marker id="arrowP" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#d2a8ff"/>
+          </marker>
+          <marker id="arrowO" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#f78166"/>
+          </marker>
+        </defs>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ─── 4. CUSTOMER PROFILES ──────────────────────────────────── -->
+  <div class="slide" id="s4">
+    <div class="row" style="max-width:900px;">
+      <div class="col" style="flex:1; gap:16px; justify-content:center;">
+        <div class="eyebrow">Customer Simulation</div>
+        <h2>From population<br>to concrete person</h2>
+        <div class="divider"></div>
+        <p>
+          Three archetypal persona profiles — <strong>Judith</strong>, <strong>Franz</strong>,
+          <strong>Peter</strong> — represent distinct UNIQA customer segments
+          with survey-derived distributions.
+        </p>
+        <p>
+          A <strong>sampling process</strong> draws specific attribute values from those
+          distributions: age, income, household type, channel preference, switch willingness,
+          and more — producing a unique, concrete individual each run.
+        </p>
+        <p>
+          The sampled JSON profile is merged with the persona's <strong>narrative markdown</strong>
+          to form a fully grounded LLM system prompt. The result is a simulated customer
+          who behaves realistically for that segment.
+        </p>
+      </div>
+      <div class="col" style="flex:1; gap:12px;">
+        <div class="card" style="border-color:rgba(63,185,80,.3);">
+          <div class="tag tag-green">Step 1 — Sample</div>
+          <h3>Population → Individual</h3>
+          <p>Draw age, income, location, insurance history, channel preferences from
+          segment distributions. Each run produces a distinct person.</p>
+        </div>
+        <div class="card" style="border-color:rgba(88,166,255,.3);">
+          <div class="tag tag-blue">Step 2 — Combine</div>
+          <h3>Profile + Narrative → System Prompt</h3>
+          <p>JSON facts (highest priority) override the persona markdown, which provides
+          tone, drop-off logic, and behavioral reasoning. Generic LLM knowledge
+          fills any remaining gaps.</p>
+        </div>
+        <div class="card" style="border-color:rgba(210,168,255,.3);">
+          <div class="tag tag-purple">Step 3 — Simulate</div>
+          <h3>LLM acts as the customer</h3>
+          <p>The model reads each form step, decides an action, and responds with
+          structured JSON — including a German-language <em>Begründung</em> explaining
+          the choice.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── 5. CUSTOMER SIMULATOR ─────────────────────────────────── -->
+  <div class="slide" id="s5">
+    <div class="row" style="max-width:900px; align-items:stretch;">
+      <div class="col" style="flex:1; gap:16px; justify-content:center;">
+        <div class="eyebrow">Customer Simulator</div>
+        <h2>LLM-driven<br>form navigation</h2>
+        <div class="divider"></div>
+        <p>
+          At each funnel step the simulator receives a structured description of
+          the current page — visible fields, current selections, validation errors,
+          and any coach message — and responds with a <strong>single JSON action</strong>.
+        </p>
+        <ul>
+          <li>Selects coverage, tariff, add-ons</li>
+          <li>Fills personal data fields</li>
+          <li>Clicks <em>proceed</em> when satisfied</li>
+          <li>Can <strong>pause</strong> (defer) or <strong>leave</strong> (abandon)</li>
+          <li>Can send a direct question to the coach</li>
+        </ul>
+        <p>
+          Full traces are written per session: every prompt, every action, latency,
+          parse retries, coach intercepts, and a final outcome classification.
+        </p>
+      </div>
+      <div class="card" style="flex:1; font-family:monospace; font-size:.78rem;
+           line-height:1.6; color:#8b949e; max-width:400px; overflow:hidden;">
+        <div style="color:#3fb950; margin-bottom:8px; font-weight:600; font-size:.8rem;">
+          Example LLM response
+        </div>
+        <div style="color:#e6edf3;">{</div>
+        <div>&nbsp;&nbsp;<span style="color:#79c0ff;">"action"</span>:
+             <span style="color:#a5d6ff;">"select_tarif"</span>,</div>
+        <div>&nbsp;&nbsp;<span style="color:#79c0ff;">"tarif"</span>:
+             <span style="color:#a5d6ff;">"optimal"</span>,</div>
+        <div>&nbsp;&nbsp;<span style="color:#79c0ff;">"begruendung"</span>: <span style="color:#a5d6ff;">"Optimal</span></div>
+        <div><span style="color:#a5d6ff;">&nbsp;&nbsp;&nbsp;deckt die wichtigsten</span></div>
+        <div><span style="color:#a5d6ff;">&nbsp;&nbsp;&nbsp;Leistungen ab und passt</span></div>
+        <div><span style="color:#a5d6ff;">&nbsp;&nbsp;&nbsp;zum Budget."</span></div>
+        <div style="color:#e6edf3;">}</div>
+        <div style="margin-top:16px; color:#3fb950; font-weight:600; font-size:.8rem;">
+          Funnel steps (0–8)
+        </div>
+        <div>0 Absicherungsbereich</div>
+        <div>1 Versicherte Person</div>
+        <div>2 Geburtsdatum &amp; SV</div>
+        <div>3 Tarif-Auswahl <span style="color:#f78166;">← 66% dropout</span></div>
+        <div>4 Zusatzleistungen</div>
+        <div>5 Persönliche Angaben</div>
+        <div>6 Bisherige Versicherungen <span style="color:#f78166;">← 78%</span></div>
+        <div>7 Beratungsort</div>
+        <div>8 Ergebnis ✓</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── 6. COACH ──────────────────────────────────────────────── -->
+  <div class="slide" id="s6">
+    <div class="row" style="max-width:900px; align-items:stretch;">
+      <div class="card" style="flex:1; font-family:monospace; font-size:.78rem;
+           line-height:1.6; color:#8b949e; max-width:380px;">
+        <div style="color:#d2a8ff; margin-bottom:8px; font-weight:600; font-size:.8rem;">
+          Coach response (per action)
+        </div>
+        <div style="color:#e6edf3;">{</div>
+        <div>&nbsp;&nbsp;<span style="color:#79c0ff;">"persona_estimate"</span>:
+             <span style="color:#a5d6ff;">"franz"</span>,</div>
+        <div>&nbsp;&nbsp;<span style="color:#79c0ff;">"persona_confidence"</span>:
+             <span style="color:#a5d6ff;">"high"</span>,</div>
+        <div>&nbsp;&nbsp;<span style="color:#79c0ff;">"persona_reasoning"</span>:
+             <span style="color:#a5d6ff;">"Digital-first,</span></div>
+        <div><span style="color:#a5d6ff;">&nbsp;&nbsp;&nbsp;no advisor needed..."</span>,</div>
+        <div>&nbsp;&nbsp;<span style="color:#79c0ff;">"customer_concerns"</span>: [</div>
+        <div><span style="color:#a5d6ff;">&nbsp;&nbsp;&nbsp;"Wants online path",</span></div>
+        <div><span style="color:#a5d6ff;">&nbsp;&nbsp;&nbsp;"Price transparency"</span></div>
+        <div>&nbsp;&nbsp;],</div>
+        <div>&nbsp;&nbsp;<span style="color:#79c0ff;">"coach_reasoning"</span>:
+             <span style="color:#a5d6ff;">"Franz type —</span></div>
+        <div><span style="color:#a5d6ff;">&nbsp;&nbsp;&nbsp;stay silent."</span>,</div>
+        <div>&nbsp;&nbsp;<span style="color:#79c0ff;">"message"</span>:
+             <span style="color:#6e7681;">null</span></div>
+        <div style="color:#e6edf3;">}</div>
+      </div>
+      <div class="col" style="flex:1; gap:16px; justify-content:center;">
+        <div class="eyebrow">Coach Simulator</div>
+        <h2>Observing &amp; nudging<br>without annoying</h2>
+        <div class="divider"></div>
+        <p>
+          The coach receives <strong>background context</strong> about the three persona
+          archetypes, their motivations, and a detailed playbook covering every funnel step.
+        </p>
+        <p>
+          After each customer action, the LLM coach <strong>observes</strong> the updated
+          form state and decides whether to send a message — or stay silent.
+        </p>
+        <ul>
+          <li><strong>Must speak</strong> when advisor routing is triggered
+              (⚠ mandatory warning)</li>
+          <li><strong>May speak</strong> when it adds clear value on high-risk steps</li>
+          <li><strong>Stays silent</strong> for Franz-type personas on the clear online path</li>
+          <li>Always produces a <em>persona estimate</em> + <em>concerns</em> + reasoning</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── 7. THREE TRACKS ──────────────────────────────────────── -->
+  <div class="slide" id="s7">
+    <div class="col" style="align-items:center; gap:24px; width:100%; max-width:980px;">
+      <div class="col" style="align-items:center; gap:4px;">
+        <div class="eyebrow">Parallel work streams</div>
+        <h2>Three directions from the same base</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="row" style="align-items:stretch;">
+
+        <div class="card" style="border-color:rgba(88,166,255,.4); flex:1;">
+          <div class="tag tag-blue">Track A</div>
+          <div class="track-label" style="color:var(--accent);">A</div>
+          <h3>Synthetic user reasoning</h3>
+          <p style="margin-bottom:10px;">
+            Generate rich, step-level explanations of <strong>why</strong> the simulated
+            customer makes each decision — including internal hesitation, price sensitivity,
+            and friction signals.
+          </p>
+          <p style="color:var(--accent); font-size:.82rem; font-weight:600;">
+            Goal → better predict drop-off moments from behavioral signals.
+          </p>
+        </div>
+
+        <div class="card" style="border-color:rgba(63,185,80,.4); flex:1;">
+          <div class="tag tag-green">Track B</div>
+          <div class="track-label" style="color:var(--accent2);">B</div>
+          <h3>Analytics-driven persona modeling</h3>
+          <p style="margin-bottom:10px;">
+            Feed real funnel analytics into the coach so it can estimate which
+            persona type it is observing — and calibrate when to intervene
+            vs. when silence is the better choice.
+          </p>
+          <p style="color:var(--accent2); font-size:.82rem; font-weight:600;">
+            Goal → persona-aware nudges that don't annoy friction-averse customers.
+          </p>
+        </div>
+
+        <div class="card" style="border-color:rgba(210,168,255,.4); flex:1;">
+          <div class="tag tag-purple">Track C</div>
+          <div class="track-label" style="color:var(--accent4);">C</div>
+          <h3>Full closed-loop evaluation</h3>
+          <p style="margin-bottom:10px;">
+            Run the minimal end-to-end system — customer sim, web form, and coach —
+            in a closed loop. Measure whether the coach actually shifts
+            completion rates vs. a no-coach baseline.
+          </p>
+          <p style="color:var(--accent4); font-size:.82rem; font-weight:600;">
+            Goal → validate the architecture; integrate A &amp; B findings afterwards.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── 8. RESULTS ───────────────────────────────────────────── -->
+  <div class="slide" id="s8">
+    <div class="col" style="align-items:center; gap:24px; width:100%; max-width:900px;">
+      <div class="col" style="align-items:center; gap:4px;">
+        <div class="eyebrow">Outcomes</div>
+        <h2>Results</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="row" style="align-items:stretch;">
+        <div class="card" style="border-color:rgba(88,166,255,.4); flex:1;">
+          <div class="tag tag-blue">Track A</div>
+          <h3>Synthetic reasoning</h3>
+          <div class="result-placeholder">Results to be added</div>
+        </div>
+        <div class="card" style="border-color:rgba(63,185,80,.4); flex:1;">
+          <div class="tag tag-green">Track B</div>
+          <h3>Persona modeling</h3>
+          <div class="result-placeholder">Results to be added</div>
+        </div>
+        <div class="card" style="border-color:rgba(210,168,255,.4); flex:1;">
+          <div class="tag tag-purple">Track C</div>
+          <h3>Full loop</h3>
+          <ul style="margin-top:8px;">
+            <li>LLM customer behavior <strong style="color:var(--accent3);">did not match</strong> historic drop-off measurements — the simulated personas complete the funnel at far higher rates than real users</li>
+            <li>A/B test (with vs. without coach) showed the coach pushing online completion to <strong style="color:var(--accent3);">~100%</strong> — clearly unrealistic</li>
+            <li>Both results point to the same root cause: the LLM is <strong>too compliant</strong> and too easily nudged, lacking the real-world friction, doubt, and inertia of actual customers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── 9. LEARNINGS ─────────────────────────────────────────── -->
+  <div class="slide" id="s9">
+    <div class="col" style="align-items:center; gap:24px; width:100%; max-width:720px;">
+      <div class="col" style="align-items:center; gap:4px;">
+        <div class="eyebrow">Reflection</div>
+        <h2>Learnings</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="card" style="width:100%; min-height:200px;">
+        <div class="result-placeholder" style="min-height:160px;">
+          Learnings to be added
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── 10. THANK YOU ────────────────────────────────────────── -->
+  <div class="slide" id="s10">
+    <div class="wing">🦋</div>
+    <h1>Thank you</h1>
+    <p style="font-size:1.1rem; max-width:480px; text-align:center;">
+      Questions, curiosity, or chaos — we're here for all of it.
+    </p>
+    <div style="margin-top:16px; display:flex; gap:16px; align-items:center;">
+      <div class="hackathon-badge" style="font-size:.9rem;">
+        <span>Team Glass Wing</span> · Zero One Hacker 2026
+      </div>
+    </div>
+  </div>
+
+</div><!-- /#deck -->
+
+<!-- ── Navigation ── -->
+<div id="nav"></div>
+<div id="slide-counter"></div>
+<div id="nav-btns">
+  <button class="nav-btn" id="btn-prev">← Prev</button>
+  <button class="nav-btn" id="btn-next">Next →</button>
+</div>
+
+<script>
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const navEl   = document.getElementById('nav');
+  const counter = document.getElementById('slide-counter');
+  let current = 0;
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => go(i));
+    navEl.appendChild(d);
+  });
+
+  function go(n) {
+    slides[current].classList.remove('active');
+    document.querySelectorAll('.dot')[current].classList.remove('active');
+    current = Math.max(0, Math.min(slides.length - 1, n));
+    slides[current].classList.add('active');
+    document.querySelectorAll('.dot')[current].classList.add('active');
+    counter.textContent = `${current + 1} / ${slides.length}`;
+  }
+
+  document.getElementById('btn-next').addEventListener('click', () => go(current + 1));
+  document.getElementById('btn-prev').addEventListener('click', () => go(current - 1));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') go(current + 1);
+    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')                     go(current - 1);
+  });
+
+  // Init counter
+  counter.textContent = `1 / ${slides.length}`;
+</script>
+</body>
+</html>
