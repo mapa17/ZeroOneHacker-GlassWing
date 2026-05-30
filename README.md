@@ -44,6 +44,7 @@ Running the minimal end-to-end system in a closed loop and measuring whether the
 ```
 simulators/
 ├── TrackA/   — Synthetic reasoning generator (Track A)
+├── TrackB/   — Python-only Conversion Coach proof lane (Track B)
 └── TrackC/   — Full closed-loop simulator (Track C)
 ```
 
