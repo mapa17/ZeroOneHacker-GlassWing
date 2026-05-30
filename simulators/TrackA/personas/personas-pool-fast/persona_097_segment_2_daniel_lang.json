@@ -1,0 +1,101 @@
+{
+  "index": 97,
+  "segmentId": "segment_2",
+  "archetypeId": "franz",
+  "archetypeName": "Franz Huber",
+  "seed": 770341,
+  "profile": {
+    "persona_id": "segment_2",
+    "persona_name": "Daniel Lang",
+    "segment_name": "Online Affine",
+    "archetype_name": "Franz Huber",
+    "sample_id": 19911,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 59,
+      "age_group": "50_59",
+      "gender": "male",
+      "urbanity": "countryside_pct",
+      "household_type": "three_person_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 2990,
+      "income_label": "average"
+    },
+    "financial_assets": [
+      "gold_precious_metals"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 5,
+      "owned_products": [
+        "household",
+        "vehicle_liability",
+        "vehicle_comprehensive",
+        "life_pension",
+        "home_ownership"
+      ],
+      "intended_purchases_next_3y": [
+        "health",
+        "occupational_disability"
+      ],
+      "monthly_insurance_spend_eur": 226,
+      "has_health_insurance": false,
+      "switch_willingness": 16,
+      "advisor_type": "independent_broker"
+    },
+    "top_decision_drivers": [
+      "tailored_products",
+      "low_engagement_only_what_needed",
+      "sustainability_focus",
+      "broad_life_coverage",
+      "values_apps_and_portals"
+    ],
+    "top_purchase_criteria": [
+      "comprehensive_product",
+      "price_performance",
+      "recommendation",
+      "prior_positive_experience",
+      "relevant_add_on_services"
+    ],
+    "preferred_information_channels": [
+      "online_comparison_platforms",
+      "insurer_websites",
+      "physical_branch"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "moved_home",
+        "minor_psychological_strain",
+        "first_car"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "moving_home",
+        "more_sports",
+        "increased_investing"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "self_online",
+      "comparison": "self_online",
+      "consultation": "self_online",
+      "purchase": "self_online",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "self_online",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "likely_to_purchase_online_next_3y",
+      "customer_portal_registered",
+      "top_product:household",
+      "top_product:vehicle_liability"
+    ],
+    "typical_quote": "I want to handle everything online — fast, simple, and transparent.",
+    "behavioral_summary": "Highly independent and information-driven"
+  }
+}

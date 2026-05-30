@@ -1,0 +1,88 @@
+{
+  "index": 175,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1387341,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Lena Gruber",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 47980,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 37,
+      "age_group": "30_39",
+      "gender": "female",
+      "urbanity": "city_pct",
+      "household_type": "in_partnership_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 2900,
+      "income_label": "average"
+    },
+    "financial_assets": [
+      "life_insurance_pension"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 1,
+      "owned_products": [
+        "accident"
+      ],
+      "intended_purchases_next_3y": [
+        "life_pension"
+      ],
+      "monthly_insurance_spend_eur": 120,
+      "has_health_insurance": false,
+      "switch_willingness": 24,
+      "advisor_type": "general_agent"
+    },
+    "top_decision_drivers": [
+      "price_performance_ratio",
+      "values_apps_and_portals",
+      "low_engagement_only_what_needed",
+      "sustainability_focus",
+      "compares_multiple_offers"
+    ],
+    "top_purchase_criteria": [
+      "advisor_familiarity",
+      "insurance_premium"
+    ],
+    "preferred_information_channels": [
+      "insurer_websites",
+      "google_search"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "moved_home",
+        "salary_jump",
+        "first_car",
+        "inheritance",
+        "had_children_last_6y"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "moving_home"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "top_product:travel"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Service-oriented: does not want to manage things alone"
+  }
+}

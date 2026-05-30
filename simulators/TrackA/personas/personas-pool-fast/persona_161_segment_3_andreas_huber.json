@@ -1,0 +1,92 @@
+{
+  "index": 161,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1276041,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Andreas Huber",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 82837,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 37,
+      "age_group": "30_39",
+      "gender": "male",
+      "urbanity": "countryside_pct",
+      "household_type": "in_partnership_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 4300,
+      "income_label": "above_average"
+    },
+    "financial_assets": [
+      "life_insurance_pension",
+      "building_savings",
+      "securities"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 4,
+      "owned_products": [
+        "household",
+        "vehicle_liability",
+        "legal_protection",
+        "accident"
+      ],
+      "intended_purchases_next_3y": [
+        "vehicle_comprehensive"
+      ],
+      "monthly_insurance_spend_eur": 264,
+      "has_health_insurance": false,
+      "switch_willingness": 24,
+      "advisor_type": "independent_broker"
+    },
+    "top_decision_drivers": [
+      "single_insurer_preference",
+      "low_engagement_only_what_needed",
+      "price_performance_ratio",
+      "sustainability_focus",
+      "values_apps_and_portals"
+    ],
+    "top_purchase_criteria": [
+      "digital_services_available"
+    ],
+    "preferred_information_channels": [
+      "online_comparison_platforms"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "moved_home",
+        "minor_psychological_strain",
+        "first_car",
+        "inheritance"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "moving_home"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online",
+      "likely_to_purchase_online_next_3y"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Service-oriented: does not want to manage things alone"
+  }
+}

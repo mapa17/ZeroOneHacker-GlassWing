@@ -1,0 +1,90 @@
+{
+  "index": 168,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1331691,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Daniel Lang",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 99562,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 30,
+      "age_group": "30_39",
+      "gender": "male",
+      "urbanity": "countryside_pct",
+      "household_type": "four_person_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 2870,
+      "income_label": "average"
+    },
+    "financial_assets": [
+      "gold_precious_metals",
+      "additional_real_estate"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 2,
+      "owned_products": [
+        "vehicle_liability",
+        "life_pension"
+      ],
+      "intended_purchases_next_3y": [
+        "vehicle_liability",
+        "life_pension",
+        "health"
+      ],
+      "monthly_insurance_spend_eur": 180,
+      "has_health_insurance": false,
+      "switch_willingness": 24,
+      "advisor_type": "no_advisor"
+    },
+    "top_decision_drivers": [
+      "single_insurer_preference",
+      "broad_life_coverage",
+      "personal_advisor_trust",
+      "sustainability_focus",
+      "price_performance_ratio"
+    ],
+    "top_purchase_criteria": [
+      "price_performance"
+    ],
+    "preferred_information_channels": [
+      "online_comparison_platforms",
+      "personal_advisor_broker",
+      "friends_acquaintances"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "hospitalization_last_3y"
+      ],
+      "planned_next_3_years": [
+        "buying_car"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "top_product:travel",
+      "top_product:vehicle_comprehensive",
+      "top_product:household"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Low interest in actively engaging with insurance"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "index": 170,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1347591,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Julia Gruber",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 38908,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 27,
+      "age_group": "18_29",
+      "gender": "female",
+      "urbanity": "city_pct",
+      "household_type": "four_person_pct",
+      "education": "with_matura",
+      "income_monthly_eur": 3530,
+      "income_label": "average"
+    },
+    "financial_assets": [
+      "life_insurance_pension"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 4,
+      "owned_products": [
+        "vehicle_liability",
+        "legal_protection",
+        "vehicle_comprehensive",
+        "death"
+      ],
+      "intended_purchases_next_3y": [
+        "legal_protection",
+        "health"
+      ],
+      "monthly_insurance_spend_eur": 182,
+      "has_health_insurance": false,
+      "switch_willingness": 24,
+      "advisor_type": "employed_insurance_advisor"
+    },
+    "top_decision_drivers": [
+      "values_apps_and_portals",
+      "always_picks_cheapest",
+      "tailored_products",
+      "price_performance_ratio"
+    ],
+    "top_purchase_criteria": [
+      "advisor_competence"
+    ],
+    "preferred_information_channels": [],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "hospitalization_last_3y"
+      ],
+      "planned_next_3_years": [
+        "moving_home",
+        "job_change",
+        "inheritance"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online",
+      "top_product:vehicle_liability"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Advisor skepticism, yet need for help"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "index": 178,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1411191,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Michael Wolf",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 10137,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 20,
+      "age_group": "18_29",
+      "gender": "male",
+      "urbanity": "countryside_pct",
+      "household_type": "with_children_pct",
+      "education": "with_matura",
+      "income_monthly_eur": 1280,
+      "income_label": "low"
+    },
+    "financial_assets": [
+      "life_insurance_pension",
+      "building_savings"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 3,
+      "owned_products": [
+        "household",
+        "vehicle_liability",
+        "vehicle_comprehensive"
+      ],
+      "intended_purchases_next_3y": [
+        "vehicle_liability",
+        "life_pension"
+      ],
+      "monthly_insurance_spend_eur": 110,
+      "has_health_insurance": false,
+      "switch_willingness": 24,
+      "advisor_type": "employed_insurance_advisor"
+    },
+    "top_decision_drivers": [
+      "single_insurer_preference",
+      "low_engagement_only_what_needed",
+      "compares_multiple_offers",
+      "always_picks_cheapest",
+      "price_performance_ratio"
+    ],
+    "top_purchase_criteria": [],
+    "preferred_information_channels": [
+      "family_and_friends"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "hospitalization_last_3y",
+        "first_car",
+        "inheritance",
+        "had_children_last_6y"
+      ],
+      "planned_next_3_years": [
+        "buying_car"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "customer_portal_registered"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Advisor skepticism, yet need for help"
+  }
+}

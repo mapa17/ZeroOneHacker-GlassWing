@@ -1,0 +1,90 @@
+{
+  "index": 182,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1442991,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Martin Berger",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 53146,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 30,
+      "age_group": "30_39",
+      "gender": "male",
+      "urbanity": "countryside_pct",
+      "household_type": "in_partnership_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 3550,
+      "income_label": "average"
+    },
+    "financial_assets": [],
+    "insurance_behavior": {
+      "products_owned_count": 5,
+      "owned_products": [
+        "household",
+        "legal_protection",
+        "home_ownership",
+        "accident",
+        "care"
+      ],
+      "intended_purchases_next_3y": [
+        "travel"
+      ],
+      "monthly_insurance_spend_eur": 299,
+      "has_health_insurance": false,
+      "switch_willingness": 24,
+      "advisor_type": "general_agent"
+    },
+    "top_decision_drivers": [
+      "personal_advisor_trust",
+      "advised_at_life_events",
+      "price_performance_ratio"
+    ],
+    "top_purchase_criteria": [
+      "recommendation",
+      "sustainability",
+      "advisor_competence",
+      "company_image",
+      "insurance_premium"
+    ],
+    "preferred_information_channels": [
+      "personal_advisor_broker",
+      "family_and_friends",
+      "customer_service"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "moved_home",
+        "minor_psychological_strain"
+      ],
+      "planned_next_3_years": [
+        "buying_car"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "likely_to_purchase_online_next_3y",
+      "top_product:vehicle_liability",
+      "top_product:travel"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Prefers simple solutions and clear guidance"
+  }
+}

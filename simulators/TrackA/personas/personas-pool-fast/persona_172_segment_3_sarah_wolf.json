@@ -1,0 +1,85 @@
+{
+  "index": 172,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1363491,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Sarah Wolf",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 94503,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 36,
+      "age_group": "30_39",
+      "gender": "female",
+      "urbanity": "intermediate_pct",
+      "household_type": "three_person_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 2470,
+      "income_label": "below_average"
+    },
+    "financial_assets": [
+      "gold_precious_metals",
+      "valuables"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 3,
+      "owned_products": [
+        "vehicle_comprehensive",
+        "life_pension",
+        "health"
+      ],
+      "intended_purchases_next_3y": [],
+      "monthly_insurance_spend_eur": 154,
+      "has_health_insurance": true,
+      "switch_willingness": 24,
+      "advisor_type": "independent_broker"
+    },
+    "top_decision_drivers": [
+      "tailored_products",
+      "compares_multiple_offers",
+      "single_insurer_preference",
+      "personal_advisor_trust",
+      "low_engagement_only_what_needed"
+    ],
+    "top_purchase_criteria": [
+      "transparent_product_info"
+    ],
+    "preferred_information_channels": [
+      "insurer_websites"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "moved_home",
+        "minor_psychological_strain",
+        "career_promotion"
+      ],
+      "planned_next_3_years": [
+        "buying_car"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "likely_to_purchase_online_next_3y"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Prefers simple solutions and clear guidance"
+  }
+}

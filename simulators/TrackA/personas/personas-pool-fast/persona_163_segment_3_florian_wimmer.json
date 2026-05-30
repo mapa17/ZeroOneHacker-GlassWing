@@ -1,0 +1,92 @@
+{
+  "index": 163,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1291941,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Florian Wimmer",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 50003,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 45,
+      "age_group": "40_49",
+      "gender": "male",
+      "urbanity": "city_pct",
+      "household_type": "in_partnership_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 2480,
+      "income_label": "below_average"
+    },
+    "financial_assets": [
+      "additional_real_estate"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 6,
+      "owned_products": [
+        "household",
+        "vehicle_liability",
+        "home_ownership",
+        "accident",
+        "occupational_disability",
+        "pet"
+      ],
+      "intended_purchases_next_3y": [
+        "vehicle_liability",
+        "accident"
+      ],
+      "monthly_insurance_spend_eur": 175,
+      "has_health_insurance": false,
+      "switch_willingness": 24,
+      "advisor_type": "employed_insurance_advisor"
+    },
+    "top_decision_drivers": [
+      "sustainability_focus",
+      "always_picks_cheapest",
+      "tailored_products",
+      "personal_advisor_trust",
+      "values_apps_and_portals"
+    ],
+    "top_purchase_criteria": [
+      "advisor_familiarity",
+      "transparent_product_info"
+    ],
+    "preferred_information_channels": [
+      "online_comparison_platforms",
+      "physical_branch"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "moved_home",
+        "hospitalization_last_3y",
+        "first_car"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "job_change"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "top_product:household"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Prefers simple solutions and clear guidance"
+  }
+}

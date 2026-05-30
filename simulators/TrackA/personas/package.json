@@ -1,0 +1,24 @@
+{
+  "name": "uniqa-persona-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "UNIQA persona creation pipeline + LLM funnel drop-off checks.",
+  "scripts": {
+    "create": "node scripts/create-personas.mjs",
+    "checks": "node scripts/run-checks.mjs",
+    "live": "node scripts/run-live.mjs",
+    "summarize": "node scripts/summarize-live.mjs",
+    "enrich-mood": "node scripts/enrich-mood.mjs",
+    "coach-stats": "node scripts/build-step-coach-stats.mjs --runs live400,live200fast",
+    "coach-impact": "node scripts/eval-coach-impact.mjs --run live400",
+    "coach-experiment": "node scripts/run-coach-experiment.mjs --n 50 --source live400 --concurrency 3 --speedup 20",
+    "live-fast200": "node scripts/create-personas.mjs --n 200 --seed 9001 --out personas-pool-fast && node scripts/run-live.mjs --pool personas-pool-fast --run live200fast --speedup 30 --concurrency 4 --limit 200",
+    "persona:gen": "node scripts/persona-generator.mjs",
+    "test:personas": "node scripts/run-tests.mjs",
+    "persona:prompts": "node scripts/generate-system-prompts.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}

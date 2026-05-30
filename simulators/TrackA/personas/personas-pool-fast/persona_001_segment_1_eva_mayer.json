@@ -1,0 +1,91 @@
+{
+  "index": 1,
+  "segmentId": "segment_1",
+  "archetypeId": "judith",
+  "archetypeName": "Judith Berger",
+  "seed": 9001,
+  "profile": {
+    "persona_id": "segment_1",
+    "persona_name": "Eva Mayer",
+    "segment_name": "Rising Hybrids",
+    "archetype_name": "Judith Berger",
+    "sample_id": 22104,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 66,
+      "age_group": "60_75",
+      "gender": "female",
+      "urbanity": "countryside_pct",
+      "household_type": "three_person_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 1580,
+      "income_label": "low"
+    },
+    "financial_assets": [
+      "securities",
+      "real_estate"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 3,
+      "owned_products": [
+        "household",
+        "vehicle_comprehensive",
+        "care"
+      ],
+      "intended_purchases_next_3y": [
+        "legal_protection",
+        "life_pension",
+        "electronics"
+      ],
+      "monthly_insurance_spend_eur": 328,
+      "has_health_insurance": false,
+      "switch_willingness": 7,
+      "advisor_type": "employed_insurance_advisor"
+    },
+    "top_decision_drivers": [
+      "single_insurer_preference",
+      "broad_life_coverage",
+      "low_engagement_only_what_needed",
+      "price_performance_ratio",
+      "values_apps_and_portals"
+    ],
+    "top_purchase_criteria": [
+      "company_image",
+      "online_purchase_option",
+      "price_performance",
+      "transparent_product_info",
+      "insurance_premium"
+    ],
+    "preferred_information_channels": [
+      "personal_advisor_broker",
+      "online_comparison_platforms"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_psychological_strain",
+        "started_saving_more",
+        "hospitalization_last_3y"
+      ],
+      "planned_next_3_years": [
+        "saving_more"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "via_advisor",
+      "comparison": "self_online",
+      "consultation": "via_advisor",
+      "purchase": "via_advisor",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "via_advisor",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [],
+    "typical_quote": "I prefer to research things myself online — but for important decisions I want someone I can trust.",
+    "behavioral_summary": "Hybrid type: combines digital channels with personal advisory"
+  }
+}

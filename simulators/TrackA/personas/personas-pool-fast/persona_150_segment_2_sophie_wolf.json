@@ -1,0 +1,91 @@
+{
+  "index": 150,
+  "segmentId": "segment_2",
+  "archetypeId": "franz",
+  "archetypeName": "Franz Huber",
+  "seed": 1191691,
+  "profile": {
+    "persona_id": "segment_2",
+    "persona_name": "Sophie Wolf",
+    "segment_name": "Online Affine",
+    "archetype_name": "Franz Huber",
+    "sample_id": 68557,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 25,
+      "age_group": "18_29",
+      "gender": "female",
+      "urbanity": "city_pct",
+      "household_type": "single_pct",
+      "education": "with_matura",
+      "income_monthly_eur": 3560,
+      "income_label": "average"
+    },
+    "financial_assets": [
+      "life_insurance_pension"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 5,
+      "owned_products": [
+        "household",
+        "legal_protection",
+        "life_pension",
+        "death",
+        "occupational_disability"
+      ],
+      "intended_purchases_next_3y": [
+        "death"
+      ],
+      "monthly_insurance_spend_eur": 302,
+      "has_health_insurance": false,
+      "switch_willingness": 16,
+      "advisor_type": "employed_insurance_advisor"
+    },
+    "top_decision_drivers": [
+      "advised_at_life_events",
+      "personal_advisor_trust",
+      "tailored_products",
+      "single_insurer_preference",
+      "price_performance_ratio"
+    ],
+    "top_purchase_criteria": [
+      "insurance_premium",
+      "prior_positive_experience",
+      "price_performance",
+      "relevant_add_on_services"
+    ],
+    "preferred_information_channels": [
+      "online_comparison_platforms"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_psychological_strain",
+        "hospitalization_last_3y"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "moving_home"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "self_online",
+      "comparison": "self_online",
+      "consultation": "self_online",
+      "purchase": "self_online",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "self_online",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online",
+      "customer_portal_registered"
+    ],
+    "typical_quote": "I want to handle everything online — fast, simple, and transparent.",
+    "behavioral_summary": "Highly independent and information-driven"
+  }
+}

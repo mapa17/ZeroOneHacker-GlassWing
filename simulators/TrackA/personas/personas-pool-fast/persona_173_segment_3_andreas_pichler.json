@@ -1,0 +1,90 @@
+{
+  "index": 173,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1371441,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Andreas Pichler",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 94421,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 49,
+      "age_group": "40_49",
+      "gender": "male",
+      "urbanity": "countryside_pct",
+      "household_type": "two_person_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 4060,
+      "income_label": "above_average"
+    },
+    "financial_assets": [
+      "building_savings",
+      "crypto"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 4,
+      "owned_products": [
+        "legal_protection",
+        "vehicle_comprehensive",
+        "life_pension",
+        "health"
+      ],
+      "intended_purchases_next_3y": [
+        "health"
+      ],
+      "monthly_insurance_spend_eur": 293,
+      "has_health_insurance": true,
+      "switch_willingness": 24,
+      "advisor_type": "employed_insurance_advisor"
+    },
+    "top_decision_drivers": [
+      "single_insurer_preference",
+      "tailored_products",
+      "willing_self_retention_for_lower_premium",
+      "personal_advisor_trust",
+      "sustainability_focus"
+    ],
+    "top_purchase_criteria": [
+      "insurance_premium",
+      "relevant_add_on_services",
+      "flexible_product",
+      "prior_positive_experience"
+    ],
+    "preferred_information_channels": [
+      "personal_advisor_broker",
+      "physical_branch"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "moved_home",
+        "hospitalization_last_3y",
+        "inheritance"
+      ],
+      "planned_next_3_years": []
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online",
+      "likely_to_purchase_online_next_3y"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Prefers simple solutions and clear guidance"
+  }
+}

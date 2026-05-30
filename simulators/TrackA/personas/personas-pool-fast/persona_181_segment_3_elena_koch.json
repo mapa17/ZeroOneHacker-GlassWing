@@ -1,0 +1,82 @@
+{
+  "index": 181,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1435041,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Elena Koch",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 28924,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 49,
+      "age_group": "40_49",
+      "gender": "female",
+      "urbanity": "city_pct",
+      "household_type": "single_divorced_widowed_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 4300,
+      "income_label": "above_average"
+    },
+    "financial_assets": [],
+    "insurance_behavior": {
+      "products_owned_count": 3,
+      "owned_products": [
+        "home_ownership",
+        "accident",
+        "death"
+      ],
+      "intended_purchases_next_3y": [],
+      "monthly_insurance_spend_eur": 205,
+      "has_health_insurance": false,
+      "switch_willingness": 24,
+      "advisor_type": "independent_broker"
+    },
+    "top_decision_drivers": [
+      "always_picks_cheapest",
+      "personal_advisor_trust",
+      "compares_multiple_offers",
+      "broad_life_coverage",
+      "values_apps_and_portals"
+    ],
+    "top_purchase_criteria": [
+      "price_performance",
+      "flexible_product"
+    ],
+    "preferred_information_channels": [],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_psychological_strain",
+        "first_car"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "buying_pet"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "customer_portal_registered",
+      "top_product:vehicle_liability",
+      "top_product:cyber"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Low interest in actively engaging with insurance"
+  }
+}

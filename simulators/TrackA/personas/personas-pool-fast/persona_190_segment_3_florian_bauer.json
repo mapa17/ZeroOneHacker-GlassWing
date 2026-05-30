@@ -1,0 +1,86 @@
+{
+  "index": 190,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1506591,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Florian Bauer",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 87338,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 55,
+      "age_group": "50_59",
+      "gender": "male",
+      "urbanity": "countryside_pct",
+      "household_type": "two_person_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 3170,
+      "income_label": "average"
+    },
+    "financial_assets": [
+      "building_savings"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 2,
+      "owned_products": [
+        "household",
+        "vehicle_liability"
+      ],
+      "intended_purchases_next_3y": [],
+      "monthly_insurance_spend_eur": 210,
+      "has_health_insurance": false,
+      "switch_willingness": 24,
+      "advisor_type": "employed_insurance_advisor"
+    },
+    "top_decision_drivers": [
+      "values_apps_and_portals",
+      "single_insurer_preference",
+      "advised_at_life_events",
+      "compares_multiple_offers",
+      "low_engagement_only_what_needed"
+    ],
+    "top_purchase_criteria": [
+      "company_image",
+      "comprehensive_product",
+      "insurance_premium"
+    ],
+    "preferred_information_channels": [
+      "online_comparison_platforms",
+      "personal_advisor_broker"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "moved_home",
+        "hospitalization_last_3y",
+        "had_children_last_6y",
+        "took_care_of_family_member"
+      ],
+      "planned_next_3_years": [
+        "buying_car"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "top_product:vehicle_liability"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Advisor skepticism, yet need for help"
+  }
+}

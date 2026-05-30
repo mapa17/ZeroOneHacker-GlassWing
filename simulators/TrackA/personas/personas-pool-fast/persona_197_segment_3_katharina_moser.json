@@ -1,0 +1,89 @@
+{
+  "index": 197,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1562241,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Katharina Moser",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 52690,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 61,
+      "age_group": "60_75",
+      "gender": "female",
+      "urbanity": "countryside_pct",
+      "household_type": "two_person_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 4770,
+      "income_label": "above_average"
+    },
+    "financial_assets": [
+      "valuables"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 5,
+      "owned_products": [
+        "household",
+        "legal_protection",
+        "accident",
+        "death",
+        "electronics"
+      ],
+      "intended_purchases_next_3y": [
+        "home_ownership",
+        "accident",
+        "death"
+      ],
+      "monthly_insurance_spend_eur": 276,
+      "has_health_insurance": false,
+      "switch_willingness": 24,
+      "advisor_type": "independent_broker"
+    },
+    "top_decision_drivers": [
+      "always_picks_cheapest",
+      "advised_at_life_events",
+      "compares_multiple_offers",
+      "tailored_products",
+      "single_insurer_preference"
+    ],
+    "top_purchase_criteria": [
+      "advisor_competence",
+      "price_performance"
+    ],
+    "preferred_information_channels": [],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "inheritance",
+        "had_children_last_6y"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "job_change",
+        "moving_into_ownership"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "top_product:vehicle_liability"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Prefers simple solutions and clear guidance"
+  }
+}

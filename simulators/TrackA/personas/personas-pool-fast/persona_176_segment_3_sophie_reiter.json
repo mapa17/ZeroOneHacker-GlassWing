@@ -1,0 +1,89 @@
+{
+  "index": 176,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1395291,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Sophie Reiter",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 92933,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 25,
+      "age_group": "18_29",
+      "gender": "female",
+      "urbanity": "city_pct",
+      "household_type": "single_divorced_widowed_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 2520,
+      "income_label": "below_average"
+    },
+    "financial_assets": [
+      "gold_precious_metals",
+      "crypto"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 6,
+      "owned_products": [
+        "household",
+        "vehicle_liability",
+        "home_ownership",
+        "accident",
+        "life_pension",
+        "health"
+      ],
+      "intended_purchases_next_3y": [
+        "electronics",
+        "cyber"
+      ],
+      "monthly_insurance_spend_eur": 158,
+      "has_health_insurance": true,
+      "switch_willingness": 24,
+      "advisor_type": "no_advisor"
+    },
+    "top_decision_drivers": [
+      "personal_advisor_trust",
+      "values_apps_and_portals",
+      "willing_self_retention_for_lower_premium",
+      "broad_life_coverage",
+      "advised_at_life_events"
+    ],
+    "top_purchase_criteria": [
+      "recommendation",
+      "comprehensive_product"
+    ],
+    "preferred_information_channels": [],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "moved_home",
+        "took_care_of_family_member"
+      ],
+      "planned_next_3_years": [
+        "buying_car"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "customer_portal_registered"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Service-oriented: does not want to manage things alone"
+  }
+}

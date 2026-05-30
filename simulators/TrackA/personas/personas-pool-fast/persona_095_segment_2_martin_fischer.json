@@ -1,0 +1,96 @@
+{
+  "index": 95,
+  "segmentId": "segment_2",
+  "archetypeId": "franz",
+  "archetypeName": "Franz Huber",
+  "seed": 754441,
+  "profile": {
+    "persona_id": "segment_2",
+    "persona_name": "Martin Fischer",
+    "segment_name": "Online Affine",
+    "archetype_name": "Franz Huber",
+    "sample_id": 26881,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 21,
+      "age_group": "18_29",
+      "gender": "male",
+      "urbanity": "city_pct",
+      "household_type": "with_children_pct",
+      "education": "with_matura",
+      "income_monthly_eur": 2280,
+      "income_label": "below_average"
+    },
+    "financial_assets": [
+      "securities",
+      "life_insurance_pension",
+      "gold_precious_metals",
+      "crypto"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 4,
+      "owned_products": [
+        "household",
+        "vehicle_liability",
+        "health",
+        "occupational_disability"
+      ],
+      "intended_purchases_next_3y": [
+        "health"
+      ],
+      "monthly_insurance_spend_eur": 246,
+      "has_health_insurance": true,
+      "switch_willingness": 16,
+      "advisor_type": "no_advisor"
+    },
+    "top_decision_drivers": [
+      "compares_multiple_offers",
+      "personal_advisor_trust",
+      "broad_life_coverage",
+      "tailored_products",
+      "low_engagement_only_what_needed"
+    ],
+    "top_purchase_criteria": [
+      "price_performance",
+      "online_purchase_option",
+      "recommendation",
+      "advisor_competence",
+      "company_image"
+    ],
+    "preferred_information_channels": [
+      "online_comparison_platforms",
+      "family_and_friends",
+      "friends_acquaintances"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "moved_home",
+        "minor_psychological_strain",
+        "hospitalization_last_3y"
+      ],
+      "planned_next_3_years": []
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "self_online",
+      "comparison": "self_online",
+      "consultation": "self_online",
+      "purchase": "self_online",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "self_online",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online",
+      "customer_portal_registered",
+      "customer_portal_active_last_12_months",
+      "top_product:travel"
+    ],
+    "typical_quote": "I want to handle everything online — fast, simple, and transparent.",
+    "behavioral_summary": "Digital-first: handles as much as possible online by themselves"
+  }
+}

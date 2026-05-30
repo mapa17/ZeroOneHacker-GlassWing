@@ -1,0 +1,99 @@
+{
+  "index": 200,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1586091,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Markus Gruber",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 44273,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 26,
+      "age_group": "18_29",
+      "gender": "male",
+      "urbanity": "countryside_pct",
+      "household_type": "single_divorced_widowed_pct",
+      "education": "with_matura",
+      "income_monthly_eur": 2830,
+      "income_label": "average"
+    },
+    "financial_assets": [
+      "real_estate"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 2,
+      "owned_products": [
+        "vehicle_comprehensive",
+        "accident"
+      ],
+      "intended_purchases_next_3y": [
+        "travel",
+        "occupational_disability",
+        "pet",
+        "motorcycle_moped"
+      ],
+      "monthly_insurance_spend_eur": 114,
+      "has_health_insurance": false,
+      "switch_willingness": 24,
+      "advisor_type": "independent_broker"
+    },
+    "top_decision_drivers": [
+      "personal_advisor_trust",
+      "advised_at_life_events",
+      "price_performance_ratio",
+      "low_engagement_only_what_needed",
+      "tailored_products"
+    ],
+    "top_purchase_criteria": [
+      "recommendation",
+      "comprehensive_product",
+      "prior_positive_experience"
+    ],
+    "preferred_information_channels": [
+      "online_comparison_platforms",
+      "customer_service",
+      "google_search"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "hospitalization_last_3y",
+        "minor_psychological_strain",
+        "first_car",
+        "inheritance",
+        "had_children_last_6y",
+        "took_care_of_family_member"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "inheritance"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "likely_to_purchase_online_next_3y",
+      "customer_portal_active_last_12_months",
+      "top_product:travel",
+      "top_product:vehicle_comprehensive"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Service-oriented: does not want to manage things alone"
+  }
+}

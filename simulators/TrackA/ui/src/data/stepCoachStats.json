@@ -1,0 +1,397 @@
+{
+  "source": "live400 + live200fast (600 sessions)",
+  "generatedAt": "2026-05-30T21:57:22.266Z",
+  "baselinePurchasePct": 7.5,
+  "steps": {
+    "0": {
+      "step": 0,
+      "page": "Absicherungsbereich",
+      "reached": 600,
+      "purchased": 45,
+      "purchasePct": 7.5,
+      "dropPct": 92.5,
+      "topDropReason": {
+        "code": "advisory_wall",
+        "label": "Beratungs-Mauer (Tarif nur mit Beratung)",
+        "pct": 36.4
+      },
+      "byEngagement": {
+        "high": {
+          "n": 600,
+          "purchasePct": 7.5,
+          "avgClicks": 2
+        }
+      },
+      "byPace": {
+        "fast_engaged": {
+          "n": 600,
+          "purchasePct": 7.5
+        }
+      },
+      "byTarif": {
+        "start": {
+          "n": 317,
+          "purchasePct": 5.4
+        },
+        "optimal": {
+          "n": 283,
+          "purchasePct": 9.9
+        }
+      },
+      "support": {
+        "title": "Einstieg klären",
+        "text": "In 21/400 Abbrüche schon hier. Kurz erklären: nur Arztbesuche vs. Krankenhaus extra.",
+        "action": "2 Optionen benennen, Krankenhaus als separates Produkt"
+      }
+    },
+    "1": {
+      "step": 1,
+      "page": "Versicherte Person",
+      "reached": 566,
+      "purchased": 45,
+      "purchasePct": 8,
+      "dropPct": 92,
+      "topDropReason": {
+        "code": "advisory_wall",
+        "label": "Beratungs-Mauer (Tarif nur mit Beratung)",
+        "pct": 38.8
+      },
+      "byEngagement": {
+        "high": {
+          "n": 566,
+          "purchasePct": 8,
+          "avgClicks": 4
+        }
+      },
+      "byPace": {
+        "fast_engaged": {
+          "n": 566,
+          "purchasePct": 8
+        }
+      },
+      "byTarif": {
+        "start": {
+          "n": 317,
+          "purchasePct": 5.4
+        },
+        "optimal": {
+          "n": 249,
+          "purchasePct": 11.2
+        }
+      },
+      "support": {
+        "title": "Personenkreis",
+        "text": "13 Abbrüche — oft „Andere Personen“. Wenn nur für sich: „Nur mich“ hervorheben.",
+        "action": "Bei Unsicherheit: Beratung anbieten"
+      }
+    },
+    "2": {
+      "step": 2,
+      "page": "Geburtsdatum & Sozialversicherung",
+      "reached": 539,
+      "purchased": 45,
+      "purchasePct": 8.3,
+      "dropPct": 91.7,
+      "topDropReason": {
+        "code": "advisory_wall",
+        "label": "Beratungs-Mauer (Tarif nur mit Beratung)",
+        "pct": 40.9
+      },
+      "byEngagement": {
+        "high": {
+          "n": 539,
+          "purchasePct": 8.3,
+          "avgClicks": 5
+        }
+      },
+      "byPace": {
+        "fast_engaged": {
+          "n": 539,
+          "purchasePct": 8.3
+        }
+      },
+      "byTarif": {
+        "start": {
+          "n": 317,
+          "purchasePct": 5.4
+        },
+        "optimal": {
+          "n": 222,
+          "purchasePct": 12.6
+        }
+      },
+      "support": {
+        "title": "Daten & Prämie",
+        "text": "29 Abbrüche. Geburtsdatum + ÖGK wirken technisch — Fortschritt sichtbar machen.",
+        "action": "Zeigen: „Ihre Prämie folgt gleich“"
+      }
+    },
+    "3": {
+      "step": 3,
+      "page": "Tarif-Auswahl",
+      "reached": 498,
+      "purchased": 45,
+      "purchasePct": 9,
+      "dropPct": 91,
+      "topDropReason": {
+        "code": "advisory_wall",
+        "label": "Beratungs-Mauer (Tarif nur mit Beratung)",
+        "pct": 44.6
+      },
+      "byEngagement": {
+        "high": {
+          "n": 497,
+          "purchasePct": 9.1,
+          "avgClicks": 7
+        }
+      },
+      "byPace": {
+        "fast_engaged": {
+          "n": 493,
+          "purchasePct": 8.9
+        },
+        "medium": {
+          "n": 5,
+          "purchasePct": 20
+        }
+      },
+      "byTarif": {
+        "start": {
+          "n": 317,
+          "purchasePct": 5.4
+        },
+        "optimal": {
+          "n": 181,
+          "purchasePct": 15.5
+        }
+      },
+      "support": {
+        "title": "Tarif-Entscheidung",
+        "text": "215/369 Abbrüche hier. Größte Hürde: Plus/Premium nur mit Beratung.",
+        "action": "Konkret: „Optimal online — Plus nur mit Beratung“ + Buchungsbutton"
+      }
+    },
+    "4": {
+      "step": 4,
+      "page": "Zusatzleistungen",
+      "reached": 178,
+      "purchased": 45,
+      "purchasePct": 25.3,
+      "dropPct": 74.7,
+      "topDropReason": {
+        "code": "final_price_commitment",
+        "label": "Zögern beim Abschluss",
+        "pct": 68.4
+      },
+      "byEngagement": {
+        "medium": {
+          "n": 6,
+          "purchasePct": 16.7,
+          "avgClicks": 8
+        },
+        "high": {
+          "n": 172,
+          "purchasePct": 25.6,
+          "avgClicks": 8
+        }
+      },
+      "byPace": {
+        "fast_engaged": {
+          "n": 169,
+          "purchasePct": 24.9
+        },
+        "medium": {
+          "n": 9,
+          "purchasePct": 33.3
+        }
+      },
+      "byTarif": {
+        "start": {
+          "n": 52,
+          "purchasePct": 32.7
+        },
+        "optimal": {
+          "n": 126,
+          "purchasePct": 22.2
+        }
+      },
+      "support": {
+        "title": "Zusatzleistungen",
+        "text": "23 Abbrüche — zu viele Module. Standard: keine Extras.",
+        "action": "„Optional — später nachrüstbar“"
+      }
+    },
+    "5": {
+      "step": 5,
+      "page": "Persönliche Angaben",
+      "reached": 144,
+      "purchased": 45,
+      "purchasePct": 31.3,
+      "dropPct": 68.8,
+      "topDropReason": {
+        "code": "final_price_commitment",
+        "label": "Zögern beim Abschluss",
+        "pct": 91.9
+      },
+      "byEngagement": {
+        "high": {
+          "n": 144,
+          "purchasePct": 31.3,
+          "avgClicks": 9
+        }
+      },
+      "byPace": {
+        "fast_engaged": {
+          "n": 130,
+          "purchasePct": 30.8
+        },
+        "medium": {
+          "n": 14,
+          "purchasePct": 35.7
+        }
+      },
+      "byTarif": {
+        "start": {
+          "n": 45,
+          "purchasePct": 37.8
+        },
+        "optimal": {
+          "n": 99,
+          "purchasePct": 28.3
+        }
+      },
+      "support": {
+        "title": "Persönliche Daten",
+        "text": "Wenige Abbrüche — wer hier ist, ist nah dran.",
+        "action": "Datenschutz-Hinweis, Felder minimieren"
+      }
+    },
+    "6": {
+      "step": 6,
+      "page": "Bisherige Versicherungen",
+      "reached": 140,
+      "purchased": 45,
+      "purchasePct": 32.1,
+      "dropPct": 67.9,
+      "topDropReason": {
+        "code": "final_price_commitment",
+        "label": "Zögern beim Abschluss",
+        "pct": 95.8
+      },
+      "byEngagement": {
+        "high": {
+          "n": 140,
+          "purchasePct": 32.1,
+          "avgClicks": 10
+        }
+      },
+      "byPace": {
+        "fast_engaged": {
+          "n": 113,
+          "purchasePct": 31.9
+        },
+        "medium": {
+          "n": 27,
+          "purchasePct": 33.3
+        }
+      },
+      "byTarif": {
+        "start": {
+          "n": 44,
+          "purchasePct": 38.6
+        },
+        "optimal": {
+          "n": 96,
+          "purchasePct": 29.2
+        }
+      },
+      "support": {
+        "title": "Abschluss & Verbindlichkeit",
+        "text": "66 Abbrüche — fast gekauft. Hauptgrund: zu verbindlich online.",
+        "action": "„Preis bleibt €X — 14 Tage widerrufbar — optional Rückruf“"
+      }
+    },
+    "7": {
+      "step": 7,
+      "page": "Beratungsweg",
+      "reached": 45,
+      "purchased": 45,
+      "purchasePct": 100,
+      "dropPct": 0,
+      "topDropReason": null,
+      "byEngagement": {
+        "high": {
+          "n": 45,
+          "purchasePct": 100,
+          "avgClicks": 10
+        }
+      },
+      "byPace": {
+        "fast_engaged": {
+          "n": 36,
+          "purchasePct": 100
+        },
+        "medium": {
+          "n": 9,
+          "purchasePct": 100
+        }
+      },
+      "byTarif": {
+        "start": {
+          "n": 17,
+          "purchasePct": 100
+        },
+        "optimal": {
+          "n": 28,
+          "purchasePct": 100
+        }
+      },
+      "support": {
+        "title": "Beratungsweg",
+        "text": "Beratungsroute — kein Online-Kauf.",
+        "action": "Termin / Rückruf"
+      }
+    },
+    "8": {
+      "step": 8,
+      "page": "Ergebnis",
+      "reached": 45,
+      "purchased": 45,
+      "purchasePct": 100,
+      "dropPct": 0,
+      "topDropReason": null,
+      "byEngagement": {
+        "high": {
+          "n": 45,
+          "purchasePct": 100,
+          "avgClicks": 11
+        }
+      },
+      "byPace": {
+        "fast_engaged": {
+          "n": 36,
+          "purchasePct": 100
+        },
+        "medium": {
+          "n": 9,
+          "purchasePct": 100
+        }
+      },
+      "byTarif": {
+        "start": {
+          "n": 17,
+          "purchasePct": 100
+        },
+        "optimal": {
+          "n": 28,
+          "purchasePct": 100
+        }
+      },
+      "support": {
+        "title": "Ergebnis",
+        "text": "Geschafft oder Beratung.",
+        "action": "Abschluss bestätigen"
+      }
+    }
+  }
+}

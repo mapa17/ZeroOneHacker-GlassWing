@@ -1,0 +1,85 @@
+{
+  "index": 192,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1522491,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Elena Koch",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 32688,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 20,
+      "age_group": "18_29",
+      "gender": "female",
+      "urbanity": "countryside_pct",
+      "household_type": "in_partnership_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 1730,
+      "income_label": "low"
+    },
+    "financial_assets": [],
+    "insurance_behavior": {
+      "products_owned_count": 1,
+      "owned_products": [
+        "household"
+      ],
+      "intended_purchases_next_3y": [],
+      "monthly_insurance_spend_eur": 156,
+      "has_health_insurance": false,
+      "switch_willingness": 24,
+      "advisor_type": "employed_insurance_advisor"
+    },
+    "top_decision_drivers": [
+      "always_picks_cheapest",
+      "compares_multiple_offers",
+      "willing_self_retention_for_lower_premium",
+      "broad_life_coverage",
+      "personal_advisor_trust"
+    ],
+    "top_purchase_criteria": [
+      "relevant_add_on_services",
+      "recommendation",
+      "online_purchase_option",
+      "transparent_product_info",
+      "comprehensive_product"
+    ],
+    "preferred_information_channels": [
+      "personal_advisor_broker",
+      "insurer_websites"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "had_children_last_6y",
+        "took_care_of_family_member"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "moving_home"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Advisor skepticism, yet need for help"
+  }
+}

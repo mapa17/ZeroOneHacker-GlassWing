@@ -1,0 +1,96 @@
+{
+  "index": 146,
+  "segmentId": "segment_2",
+  "archetypeId": "franz",
+  "archetypeName": "Franz Huber",
+  "seed": 1159891,
+  "profile": {
+    "persona_id": "segment_2",
+    "persona_name": "Andreas Wimmer",
+    "segment_name": "Online Affine",
+    "archetype_name": "Franz Huber",
+    "sample_id": 81477,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 45,
+      "age_group": "40_49",
+      "gender": "male",
+      "urbanity": "countryside_pct",
+      "household_type": "four_person_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 4000,
+      "income_label": "above_average"
+    },
+    "financial_assets": [
+      "securities",
+      "gold_precious_metals"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 4,
+      "owned_products": [
+        "household",
+        "vehicle_comprehensive",
+        "life_pension",
+        "pet"
+      ],
+      "intended_purchases_next_3y": [],
+      "monthly_insurance_spend_eur": 231,
+      "has_health_insurance": false,
+      "switch_willingness": 16,
+      "advisor_type": "no_advisor"
+    },
+    "top_decision_drivers": [
+      "compares_multiple_offers",
+      "low_engagement_only_what_needed",
+      "broad_life_coverage",
+      "willing_self_retention_for_lower_premium",
+      "price_performance_ratio"
+    ],
+    "top_purchase_criteria": [
+      "price_performance",
+      "advisor_proximity",
+      "comprehensive_product",
+      "advisor_competence",
+      "relevant_add_on_services"
+    ],
+    "preferred_information_channels": [
+      "insurer_websites",
+      "family_and_friends",
+      "personal_advisor_broker"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "moved_home",
+        "started_investing"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "moving_home",
+        "more_sports"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "self_online",
+      "comparison": "self_online",
+      "consultation": "self_online",
+      "purchase": "self_online",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "self_online",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online",
+      "likely_to_purchase_online_next_3y",
+      "customer_portal_registered",
+      "customer_portal_active_last_12_months"
+    ],
+    "typical_quote": "I want to handle everything online — fast, simple, and transparent.",
+    "behavioral_summary": "Pragmatic view of insurance ('a product like any other')"
+  }
+}

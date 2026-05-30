@@ -1,0 +1,99 @@
+{
+  "index": 42,
+  "segmentId": "segment_1",
+  "archetypeId": "judith",
+  "archetypeName": "Judith Berger",
+  "seed": 334951,
+  "profile": {
+    "persona_id": "segment_1",
+    "persona_name": "Lena Berger",
+    "segment_name": "Rising Hybrids",
+    "archetype_name": "Judith Berger",
+    "sample_id": 53014,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 69,
+      "age_group": "60_75",
+      "gender": "female",
+      "urbanity": "countryside_pct",
+      "household_type": "with_children_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 3460,
+      "income_label": "average"
+    },
+    "financial_assets": [
+      "securities",
+      "building_savings",
+      "additional_real_estate"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 5,
+      "owned_products": [
+        "vehicle_comprehensive",
+        "life_pension",
+        "home_ownership",
+        "pet",
+        "care"
+      ],
+      "intended_purchases_next_3y": [
+        "travel",
+        "occupational_disability",
+        "pet"
+      ],
+      "monthly_insurance_spend_eur": 344,
+      "has_health_insurance": false,
+      "switch_willingness": 7,
+      "advisor_type": "general_agent"
+    },
+    "top_decision_drivers": [
+      "tailored_products",
+      "always_picks_cheapest",
+      "values_apps_and_portals",
+      "advised_at_life_events",
+      "sustainability_focus"
+    ],
+    "top_purchase_criteria": [
+      "flexible_product",
+      "advisor_competence",
+      "sustainability"
+    ],
+    "preferred_information_channels": [
+      "online_comparison_platforms",
+      "family_and_friends"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "started_saving_more",
+        "moved_home",
+        "salary_jump",
+        "started_financial_planning_for_future"
+      ],
+      "planned_next_3_years": [
+        "more_sports",
+        "losing_weight"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "via_advisor",
+      "comparison": "self_online",
+      "consultation": "via_advisor",
+      "purchase": "via_advisor",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "via_advisor",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online",
+      "likely_to_purchase_online_next_3y",
+      "customer_portal_active_last_12_months",
+      "top_product:vehicle_liability"
+    ],
+    "typical_quote": "I prefer to research things myself online — but for important decisions I want someone I can trust.",
+    "behavioral_summary": "Hybrid type: combines digital channels with personal advisory"
+  }
+}

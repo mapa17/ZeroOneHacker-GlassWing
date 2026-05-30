@@ -1,0 +1,91 @@
+{
+  "index": 69,
+  "segmentId": "segment_2",
+  "archetypeId": "franz",
+  "archetypeName": "Franz Huber",
+  "seed": 547741,
+  "profile": {
+    "persona_id": "segment_2",
+    "persona_name": "Lena Koch",
+    "segment_name": "Online Affine",
+    "archetype_name": "Franz Huber",
+    "sample_id": 67994,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 39,
+      "age_group": "30_39",
+      "gender": "female",
+      "urbanity": "intermediate_pct",
+      "household_type": "single_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 2300,
+      "income_label": "below_average"
+    },
+    "financial_assets": [
+      "crypto"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 4,
+      "owned_products": [
+        "household",
+        "vehicle_liability",
+        "legal_protection",
+        "electronics"
+      ],
+      "intended_purchases_next_3y": [
+        "travel"
+      ],
+      "monthly_insurance_spend_eur": 133,
+      "has_health_insurance": false,
+      "switch_willingness": 16,
+      "advisor_type": "independent_broker"
+    },
+    "top_decision_drivers": [
+      "tailored_products",
+      "personal_advisor_trust",
+      "single_insurer_preference",
+      "sustainability_focus",
+      "values_apps_and_portals"
+    ],
+    "top_purchase_criteria": [
+      "digital_services_available",
+      "price_performance",
+      "advisor_familiarity",
+      "comprehensive_product",
+      "relevant_add_on_services"
+    ],
+    "preferred_information_channels": [
+      "google_search"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints"
+      ],
+      "planned_next_3_years": [
+        "moving_home"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "self_online",
+      "comparison": "self_online",
+      "consultation": "self_online",
+      "purchase": "self_online",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "self_online",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online",
+      "likely_to_purchase_online_next_3y",
+      "top_product:household",
+      "top_product:vehicle_comprehensive"
+    ],
+    "typical_quote": "I want to handle everything online — fast, simple, and transparent.",
+    "behavioral_summary": "Pragmatic view of insurance ('a product like any other')"
+  }
+}
