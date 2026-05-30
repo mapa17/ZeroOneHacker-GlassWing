@@ -1,0 +1,40 @@
+{
+  "states": ["orienting", "evaluating", "overwhelmed", "ready", "abandoning"],
+  "conf_gate": 0.35,
+  "low_conf_exit": 0.30,
+  "segment_priors": {
+    "S1": { "nps": 17, "online_target": true, "advisor_ok": true },
+    "S2": { "nps": 1, "online_target": true, "advisor_ok": false },
+    "S3": { "nps": -6, "online_target": false, "advisor_ok": true },
+    "None": { "nps": 5, "online_target": true, "advisor_ok": true }
+  },
+  "step_baseline_ms": {
+    "coverage": 5000,
+    "whom": 3000,
+    "personal": 12000,
+    "tariff": 15000,
+    "addons": 10000,
+    "person": 20000,
+    "history": 8000,
+    "finalprice": 12000,
+    "closing": 15000
+  },
+  "likelihood": {
+    "back_nav": [0.3, 0.4, 0.5, 0.1, 0.8],
+    "hover_cancel": [0.1, 0.15, 0.25, 0.1, 0.95],
+    "hover_advisory": [0.4, 0.7, 0.3, 0.2, 0.3],
+    "hover_glossary": [0.6, 0.4, 0.6, 0.2, 0.2],
+    "toggle_tariff": [0.3, 0.8, 0.4, 0.3, 0.2],
+    "tab_blur": [0.3, 0.7, 0.2, 0.2, 0.5],
+    "select": [0.2, 0.3, 0.1, 0.9, 0.1],
+    "hover_phone": [0.2, 0.2, 0.8, 0.1, 0.5],
+    "edit_clean": [0.5, 0.4, 0.1, 0.6, 0.1],
+    "edit_hesitant": [0.4, 0.3, 0.8, 0.2, 0.3],
+    "edit_corrected": [0.3, 0.3, 0.9, 0.1, 0.3],
+    "dwell_fast": [0.3, 0.4, 0.1, 0.8, 0.2],
+    "dwell_normal": [0.5, 0.5, 0.3, 0.5, 0.2],
+    "dwell_slow": [0.5, 0.5, 0.7, 0.2, 0.4],
+    "dwell_stalled": [0.2, 0.3, 0.9, 0.1, 0.7]
+  },
+  "out_of_scope_values": ["krankenhaus", "others", "andere", "optplus", "premium"]
+}
