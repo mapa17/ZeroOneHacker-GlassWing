@@ -1,0 +1,84 @@
+{
+  "index": 112,
+  "segmentId": "segment_2",
+  "archetypeId": "franz",
+  "archetypeName": "Franz Huber",
+  "seed": 889591,
+  "profile": {
+    "persona_id": "segment_2",
+    "persona_name": "Martin Huber",
+    "segment_name": "Online Affine",
+    "archetype_name": "Franz Huber",
+    "sample_id": 16759,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 34,
+      "age_group": "30_39",
+      "gender": "male",
+      "urbanity": "city_pct",
+      "household_type": "three_person_pct",
+      "education": "with_matura",
+      "income_monthly_eur": 2670,
+      "income_label": "below_average"
+    },
+    "financial_assets": [
+      "securities"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 2,
+      "owned_products": [
+        "household",
+        "vehicle_liability"
+      ],
+      "intended_purchases_next_3y": [
+        "travel"
+      ],
+      "monthly_insurance_spend_eur": 257,
+      "has_health_insurance": false,
+      "switch_willingness": 16,
+      "advisor_type": "independent_broker"
+    },
+    "top_decision_drivers": [
+      "price_performance_ratio",
+      "always_picks_cheapest",
+      "tailored_products",
+      "advised_at_life_events",
+      "low_engagement_only_what_needed"
+    ],
+    "top_purchase_criteria": [
+      "flexible_product",
+      "relevant_add_on_services",
+      "transparent_product_info",
+      "advisor_familiarity"
+    ],
+    "preferred_information_channels": [
+      "insurer_websites"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "moved_home"
+      ],
+      "planned_next_3_years": []
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "self_online",
+      "comparison": "self_online",
+      "consultation": "self_online",
+      "purchase": "self_online",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "self_online",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "top_product:vehicle_liability",
+      "top_product:legal_protection"
+    ],
+    "typical_quote": "I want to handle everything online — fast, simple, and transparent.",
+    "behavioral_summary": "Low advisor loyalty — often no fixed contact person (47% no advisor)"
+  }
+}

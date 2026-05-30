@@ -1,0 +1,94 @@
+{
+  "index": 191,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1514541,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Stefan Wimmer",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 27018,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 52,
+      "age_group": "50_59",
+      "gender": "male",
+      "urbanity": "countryside_pct",
+      "household_type": "in_partnership_pct",
+      "education": "with_matura",
+      "income_monthly_eur": 2440,
+      "income_label": "below_average"
+    },
+    "financial_assets": [
+      "life_insurance_pension"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 4,
+      "owned_products": [
+        "household",
+        "vehicle_comprehensive",
+        "home_ownership",
+        "travel"
+      ],
+      "intended_purchases_next_3y": [
+        "pet"
+      ],
+      "monthly_insurance_spend_eur": 281,
+      "has_health_insurance": false,
+      "switch_willingness": 24,
+      "advisor_type": "employed_insurance_advisor"
+    },
+    "top_decision_drivers": [
+      "personal_advisor_trust",
+      "tailored_products",
+      "willing_self_retention_for_lower_premium",
+      "sustainability_focus",
+      "broad_life_coverage"
+    ],
+    "top_purchase_criteria": [
+      "insurance_premium",
+      "price_performance",
+      "transparent_product_info"
+    ],
+    "preferred_information_channels": [
+      "family_and_friends",
+      "customer_service",
+      "google_search"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "moved_home",
+        "hospitalization_last_3y",
+        "first_car"
+      ],
+      "planned_next_3_years": [
+        "job_change",
+        "inheritance"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online",
+      "likely_to_purchase_online_next_3y",
+      "customer_portal_registered",
+      "customer_portal_active_last_12_months"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Advisor skepticism, yet need for help"
+  }
+}

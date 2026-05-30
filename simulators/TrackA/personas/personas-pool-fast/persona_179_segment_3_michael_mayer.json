@@ -1,0 +1,98 @@
+{
+  "index": 179,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1419141,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Michael Mayer",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 71505,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 53,
+      "age_group": "50_59",
+      "gender": "male",
+      "urbanity": "countryside_pct",
+      "household_type": "two_person_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 3650,
+      "income_label": "average"
+    },
+    "financial_assets": [
+      "crypto"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 6,
+      "owned_products": [
+        "household",
+        "legal_protection",
+        "vehicle_comprehensive",
+        "home_ownership",
+        "accident",
+        "life_pension"
+      ],
+      "intended_purchases_next_3y": [
+        "legal_protection",
+        "vehicle_comprehensive",
+        "life_pension",
+        "pet"
+      ],
+      "monthly_insurance_spend_eur": 125,
+      "has_health_insurance": false,
+      "switch_willingness": 24,
+      "advisor_type": "employed_insurance_advisor"
+    },
+    "top_decision_drivers": [
+      "broad_life_coverage",
+      "personal_advisor_trust",
+      "sustainability_focus",
+      "compares_multiple_offers",
+      "tailored_products"
+    ],
+    "top_purchase_criteria": [
+      "comprehensive_product"
+    ],
+    "preferred_information_channels": [
+      "personal_advisor_broker",
+      "family_and_friends",
+      "customer_service"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "moved_home",
+        "hospitalization_last_3y",
+        "first_car",
+        "career_promotion"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "moving_home",
+        "job_change"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online",
+      "likely_to_purchase_online_next_3y",
+      "top_product:household"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Sees insurance as a necessary topic, not a personal interest"
+  }
+}

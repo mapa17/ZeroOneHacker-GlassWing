@@ -1,0 +1,100 @@
+{
+  "index": 78,
+  "segmentId": "segment_2",
+  "archetypeId": "franz",
+  "archetypeName": "Franz Huber",
+  "seed": 619291,
+  "profile": {
+    "persona_id": "segment_2",
+    "persona_name": "Markus Gruber",
+    "segment_name": "Online Affine",
+    "archetype_name": "Franz Huber",
+    "sample_id": 45445,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 25,
+      "age_group": "18_29",
+      "gender": "male",
+      "urbanity": "countryside_pct",
+      "household_type": "in_partnership_pct",
+      "education": "with_matura",
+      "income_monthly_eur": 2460,
+      "income_label": "below_average"
+    },
+    "financial_assets": [
+      "life_insurance_pension",
+      "gold_precious_metals",
+      "valuables"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 8,
+      "owned_products": [
+        "household",
+        "vehicle_liability",
+        "legal_protection",
+        "vehicle_comprehensive",
+        "life_pension",
+        "home_ownership",
+        "accident",
+        "electronics"
+      ],
+      "intended_purchases_next_3y": [
+        "household",
+        "travel"
+      ],
+      "monthly_insurance_spend_eur": 157,
+      "has_health_insurance": false,
+      "switch_willingness": 16,
+      "advisor_type": "employed_insurance_advisor"
+    },
+    "top_decision_drivers": [
+      "broad_life_coverage",
+      "values_apps_and_portals",
+      "low_engagement_only_what_needed",
+      "compares_multiple_offers",
+      "tailored_products"
+    ],
+    "top_purchase_criteria": [
+      "comprehensive_product",
+      "online_purchase_option",
+      "insurance_premium",
+      "digital_services_available",
+      "prior_positive_experience"
+    ],
+    "preferred_information_channels": [
+      "online_comparison_platforms",
+      "customer_service",
+      "physical_branch"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "moved_home",
+        "minor_psychological_strain"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "moving_home"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "self_online",
+      "comparison": "self_online",
+      "consultation": "self_online",
+      "purchase": "self_online",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "self_online",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online"
+    ],
+    "typical_quote": "I want to handle everything online — fast, simple, and transparent.",
+    "behavioral_summary": "Highly independent and information-driven"
+  }
+}

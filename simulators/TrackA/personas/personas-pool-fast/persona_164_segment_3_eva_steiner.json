@@ -1,0 +1,91 @@
+{
+  "index": 164,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1299891,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Eva Steiner",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 92913,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 59,
+      "age_group": "50_59",
+      "gender": "female",
+      "urbanity": "countryside_pct",
+      "household_type": "single_pct",
+      "education": "with_matura",
+      "income_monthly_eur": 3690,
+      "income_label": "average"
+    },
+    "financial_assets": [
+      "building_savings",
+      "valuables"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 5,
+      "owned_products": [
+        "household",
+        "vehicle_liability",
+        "vehicle_comprehensive",
+        "accident",
+        "health"
+      ],
+      "intended_purchases_next_3y": [
+        "life_pension"
+      ],
+      "monthly_insurance_spend_eur": 123,
+      "has_health_insurance": true,
+      "switch_willingness": 24,
+      "advisor_type": "independent_broker"
+    },
+    "top_decision_drivers": [
+      "sustainability_focus",
+      "willing_self_retention_for_lower_premium",
+      "values_apps_and_portals",
+      "low_engagement_only_what_needed",
+      "tailored_products"
+    ],
+    "top_purchase_criteria": [
+      "prior_positive_experience",
+      "insurance_premium",
+      "price_performance"
+    ],
+    "preferred_information_channels": [
+      "physical_branch"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "moved_home",
+        "hospitalization_last_3y"
+      ],
+      "planned_next_3_years": [
+        "job_change"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online",
+      "likely_to_purchase_online_next_3y",
+      "customer_portal_registered"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Low interest in actively engaging with insurance"
+  }
+}

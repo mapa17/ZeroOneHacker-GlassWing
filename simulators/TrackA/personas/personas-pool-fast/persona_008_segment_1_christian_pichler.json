@@ -1,0 +1,99 @@
+{
+  "index": 8,
+  "segmentId": "segment_1",
+  "archetypeId": "judith",
+  "archetypeName": "Judith Berger",
+  "seed": 64651,
+  "profile": {
+    "persona_id": "segment_1",
+    "persona_name": "Christian Pichler",
+    "segment_name": "Rising Hybrids",
+    "archetype_name": "Judith Berger",
+    "sample_id": 67669,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 56,
+      "age_group": "50_59",
+      "gender": "male",
+      "urbanity": "countryside_pct",
+      "household_type": "in_partnership_pct",
+      "education": "with_matura",
+      "income_monthly_eur": 3380,
+      "income_label": "average"
+    },
+    "financial_assets": [
+      "life_insurance_pension",
+      "building_savings",
+      "real_estate"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 4,
+      "owned_products": [
+        "household",
+        "vehicle_comprehensive",
+        "home_ownership",
+        "care"
+      ],
+      "intended_purchases_next_3y": [
+        "health"
+      ],
+      "monthly_insurance_spend_eur": 215,
+      "has_health_insurance": false,
+      "switch_willingness": 7,
+      "advisor_type": "general_agent"
+    },
+    "top_decision_drivers": [
+      "values_apps_and_portals",
+      "personal_advisor_trust",
+      "compares_multiple_offers",
+      "sustainability_focus",
+      "tailored_products"
+    ],
+    "top_purchase_criteria": [
+      "prior_positive_experience",
+      "relevant_add_on_services",
+      "insurance_premium",
+      "price_performance",
+      "transparent_product_info"
+    ],
+    "preferred_information_channels": [
+      "online_comparison_platforms",
+      "friends_acquaintances",
+      "physical_branch"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "minor_psychological_strain",
+        "started_saving_more",
+        "moved_home",
+        "started_investing"
+      ],
+      "planned_next_3_years": [
+        "saving_more",
+        "diet_change",
+        "increased_investing"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "via_advisor",
+      "comparison": "self_online",
+      "consultation": "via_advisor",
+      "purchase": "via_advisor",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "via_advisor",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "likely_to_purchase_online_next_3y",
+      "customer_portal_active_last_12_months"
+    ],
+    "typical_quote": "I prefer to research things myself online — but for important decisions I want someone I can trust.",
+    "behavioral_summary": "Researches independently (online, comparison)"
+  }
+}

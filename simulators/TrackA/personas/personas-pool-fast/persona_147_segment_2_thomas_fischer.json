@@ -1,0 +1,98 @@
+{
+  "index": 147,
+  "segmentId": "segment_2",
+  "archetypeId": "franz",
+  "archetypeName": "Franz Huber",
+  "seed": 1167841,
+  "profile": {
+    "persona_id": "segment_2",
+    "persona_name": "Thomas Fischer",
+    "segment_name": "Online Affine",
+    "archetype_name": "Franz Huber",
+    "sample_id": 58717,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 56,
+      "age_group": "50_59",
+      "gender": "male",
+      "urbanity": "intermediate_pct",
+      "household_type": "single_divorced_widowed_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 5480,
+      "income_label": "high"
+    },
+    "financial_assets": [
+      "gold_precious_metals",
+      "crypto"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 5,
+      "owned_products": [
+        "household",
+        "vehicle_liability",
+        "vehicle_comprehensive",
+        "home_ownership",
+        "health"
+      ],
+      "intended_purchases_next_3y": [
+        "life_pension",
+        "health",
+        "death"
+      ],
+      "monthly_insurance_spend_eur": 234,
+      "has_health_insurance": true,
+      "switch_willingness": 16,
+      "advisor_type": "employed_insurance_advisor"
+    },
+    "top_decision_drivers": [
+      "personal_advisor_trust",
+      "sustainability_focus",
+      "price_performance_ratio",
+      "tailored_products",
+      "values_apps_and_portals"
+    ],
+    "top_purchase_criteria": [
+      "insurance_premium",
+      "relevant_add_on_services"
+    ],
+    "preferred_information_channels": [
+      "online_comparison_platforms",
+      "insurer_websites",
+      "google_search",
+      "friends_acquaintances"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "moved_home",
+        "hospitalization_last_3y"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "moving_home"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "self_online",
+      "comparison": "self_online",
+      "consultation": "self_online",
+      "purchase": "self_online",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "self_online",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online",
+      "customer_portal_active_last_12_months",
+      "top_product:household",
+      "top_product:vehicle_comprehensive"
+    ],
+    "typical_quote": "I want to handle everything online — fast, simple, and transparent.",
+    "behavioral_summary": "Active user of comparison platforms and websites"
+  }
+}

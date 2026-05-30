@@ -1,0 +1,91 @@
+{
+  "index": 62,
+  "segmentId": "segment_2",
+  "archetypeId": "franz",
+  "archetypeName": "Franz Huber",
+  "seed": 492091,
+  "profile": {
+    "persona_id": "segment_2",
+    "persona_name": "Sophie Lang",
+    "segment_name": "Online Affine",
+    "archetype_name": "Franz Huber",
+    "sample_id": 50331,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 61,
+      "age_group": "60_75",
+      "gender": "female",
+      "urbanity": "city_pct",
+      "household_type": "four_person_pct",
+      "education": "with_matura",
+      "income_monthly_eur": 1360,
+      "income_label": "low"
+    },
+    "financial_assets": [
+      "securities"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 4,
+      "owned_products": [
+        "household",
+        "vehicle_liability",
+        "life_pension",
+        "death"
+      ],
+      "intended_purchases_next_3y": [
+        "health",
+        "travel"
+      ],
+      "monthly_insurance_spend_eur": 181,
+      "has_health_insurance": false,
+      "switch_willingness": 16,
+      "advisor_type": "independent_broker"
+    },
+    "top_decision_drivers": [
+      "price_performance_ratio",
+      "values_apps_and_portals",
+      "advised_at_life_events",
+      "compares_multiple_offers",
+      "tailored_products"
+    ],
+    "top_purchase_criteria": [
+      "price_performance",
+      "online_purchase_option",
+      "transparent_product_info",
+      "insurance_premium",
+      "prior_positive_experience"
+    ],
+    "preferred_information_channels": [
+      "family_and_friends"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "first_car"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "increased_investing"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "self_online",
+      "comparison": "self_online",
+      "consultation": "self_online",
+      "purchase": "self_online",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "self_online",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "top_product:vehicle_liability"
+    ],
+    "typical_quote": "I want to handle everything online — fast, simple, and transparent.",
+    "behavioral_summary": "Active user of comparison platforms and websites"
+  }
+}

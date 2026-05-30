@@ -1,0 +1,89 @@
+{
+  "index": 86,
+  "segmentId": "segment_2",
+  "archetypeId": "franz",
+  "archetypeName": "Franz Huber",
+  "seed": 682891,
+  "profile": {
+    "persona_id": "segment_2",
+    "persona_name": "Stefan Berger",
+    "segment_name": "Online Affine",
+    "archetype_name": "Franz Huber",
+    "sample_id": 67617,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 35,
+      "age_group": "30_39",
+      "gender": "male",
+      "urbanity": "city_pct",
+      "household_type": "single_pct",
+      "education": "with_matura",
+      "income_monthly_eur": 2130,
+      "income_label": "below_average"
+    },
+    "financial_assets": [
+      "securities",
+      "gold_precious_metals"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 4,
+      "owned_products": [
+        "household",
+        "vehicle_liability",
+        "life_pension",
+        "home_ownership"
+      ],
+      "intended_purchases_next_3y": [
+        "vehicle_comprehensive"
+      ],
+      "monthly_insurance_spend_eur": 266,
+      "has_health_insurance": false,
+      "switch_willingness": 16,
+      "advisor_type": "general_agent"
+    },
+    "top_decision_drivers": [
+      "values_apps_and_portals",
+      "single_insurer_preference",
+      "broad_life_coverage",
+      "tailored_products",
+      "personal_advisor_trust"
+    ],
+    "top_purchase_criteria": [
+      "online_purchase_option"
+    ],
+    "preferred_information_channels": [
+      "insurer_websites",
+      "google_search",
+      "family_and_friends"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_psychological_strain"
+      ],
+      "planned_next_3_years": [
+        "buying_car"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "self_online",
+      "comparison": "self_online",
+      "consultation": "self_online",
+      "purchase": "self_online",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "self_online",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online",
+      "likely_to_purchase_online_next_3y",
+      "top_product:travel"
+    ],
+    "typical_quote": "I want to handle everything online — fast, simple, and transparent.",
+    "behavioral_summary": "Active user of comparison platforms and websites"
+  }
+}

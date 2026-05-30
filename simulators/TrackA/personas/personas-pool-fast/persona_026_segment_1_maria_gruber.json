@@ -1,0 +1,104 @@
+{
+  "index": 26,
+  "segmentId": "segment_1",
+  "archetypeId": "judith",
+  "archetypeName": "Judith Berger",
+  "seed": 207751,
+  "profile": {
+    "persona_id": "segment_1",
+    "persona_name": "Maria Gruber",
+    "segment_name": "Rising Hybrids",
+    "archetype_name": "Judith Berger",
+    "sample_id": 58107,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 46,
+      "age_group": "40_49",
+      "gender": "female",
+      "urbanity": "city_pct",
+      "household_type": "in_partnership_pct",
+      "education": "with_matura",
+      "income_monthly_eur": 3320,
+      "income_label": "average"
+    },
+    "financial_assets": [
+      "life_insurance_pension",
+      "securities",
+      "building_savings"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 4,
+      "owned_products": [
+        "household",
+        "vehicle_comprehensive",
+        "life_pension",
+        "care"
+      ],
+      "intended_purchases_next_3y": [],
+      "monthly_insurance_spend_eur": 324,
+      "has_health_insurance": false,
+      "switch_willingness": 7,
+      "advisor_type": "employed_insurance_advisor"
+    },
+    "top_decision_drivers": [
+      "personal_advisor_trust",
+      "low_engagement_only_what_needed",
+      "price_performance_ratio",
+      "single_insurer_preference",
+      "tailored_products"
+    ],
+    "top_purchase_criteria": [
+      "advisor_competence",
+      "comprehensive_product",
+      "recommendation",
+      "advisor_proximity",
+      "transparent_product_info"
+    ],
+    "preferred_information_channels": [
+      "personal_advisor_broker",
+      "online_comparison_platforms",
+      "insurer_websites",
+      "family_and_friends",
+      "google_search",
+      "friends_acquaintances",
+      "physical_branch",
+      "customer_service"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "started_saving_more",
+        "hospitalization_last_3y",
+        "started_financial_planning_for_future"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "losing_weight",
+        "stress_reduction",
+        "financial_planning_for_future"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "via_advisor",
+      "comparison": "self_online",
+      "consultation": "via_advisor",
+      "purchase": "via_advisor",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "via_advisor",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "customer_portal_registered",
+      "customer_portal_active_last_12_months",
+      "top_product:travel",
+      "top_product:pet"
+    ],
+    "typical_quote": "I prefer to research things myself online — but for important decisions I want someone I can trust.",
+    "behavioral_summary": "Hybrid type: combines digital channels with personal advisory"
+  }
+}

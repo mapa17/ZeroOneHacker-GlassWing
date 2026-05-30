@@ -1,0 +1,92 @@
+{
+  "index": 167,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1323741,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Lukas Pichler",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 93716,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 48,
+      "age_group": "40_49",
+      "gender": "male",
+      "urbanity": "intermediate_pct",
+      "household_type": "single_pct",
+      "education": "with_matura",
+      "income_monthly_eur": 2400,
+      "income_label": "below_average"
+    },
+    "financial_assets": [
+      "life_insurance_pension",
+      "securities",
+      "gold_precious_metals",
+      "real_estate",
+      "valuables",
+      "additional_real_estate"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 2,
+      "owned_products": [
+        "household",
+        "legal_protection"
+      ],
+      "intended_purchases_next_3y": [
+        "travel"
+      ],
+      "monthly_insurance_spend_eur": 130,
+      "has_health_insurance": false,
+      "switch_willingness": 24,
+      "advisor_type": "no_advisor"
+    },
+    "top_decision_drivers": [
+      "price_performance_ratio",
+      "compares_multiple_offers",
+      "values_apps_and_portals",
+      "willing_self_retention_for_lower_premium",
+      "broad_life_coverage"
+    ],
+    "top_purchase_criteria": [
+      "recommendation",
+      "digital_services_available",
+      "flexible_product"
+    ],
+    "preferred_information_channels": [
+      "family_and_friends"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_psychological_strain",
+        "had_children_last_6y",
+        "took_care_of_family_member"
+      ],
+      "planned_next_3_years": [
+        "moving_into_ownership"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "likely_to_purchase_online_next_3y",
+      "top_product:travel"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Advisor skepticism, yet need for help"
+  }
+}

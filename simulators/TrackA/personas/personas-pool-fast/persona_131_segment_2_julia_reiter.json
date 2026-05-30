@@ -1,0 +1,91 @@
+{
+  "index": 131,
+  "segmentId": "segment_2",
+  "archetypeId": "franz",
+  "archetypeName": "Franz Huber",
+  "seed": 1040641,
+  "profile": {
+    "persona_id": "segment_2",
+    "persona_name": "Julia Reiter",
+    "segment_name": "Online Affine",
+    "archetype_name": "Franz Huber",
+    "sample_id": 75704,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 31,
+      "age_group": "30_39",
+      "gender": "female",
+      "urbanity": "countryside_pct",
+      "household_type": "two_person_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 2050,
+      "income_label": "below_average"
+    },
+    "financial_assets": [
+      "life_insurance_pension"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 3,
+      "owned_products": [
+        "household",
+        "vehicle_liability",
+        "life_pension"
+      ],
+      "intended_purchases_next_3y": [
+        "legal_protection",
+        "bicycle_scooter"
+      ],
+      "monthly_insurance_spend_eur": 261,
+      "has_health_insurance": false,
+      "switch_willingness": 16,
+      "advisor_type": "independent_broker"
+    },
+    "top_decision_drivers": [
+      "personal_advisor_trust",
+      "compares_multiple_offers",
+      "sustainability_focus",
+      "values_apps_and_portals",
+      "broad_life_coverage"
+    ],
+    "top_purchase_criteria": [
+      "digital_services_available",
+      "comprehensive_product",
+      "price_performance"
+    ],
+    "preferred_information_channels": [
+      "insurer_websites"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "moved_home",
+        "minor_psychological_strain"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "more_sports"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "self_online",
+      "comparison": "self_online",
+      "consultation": "self_online",
+      "purchase": "self_online",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "self_online",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "customer_portal_registered",
+      "customer_portal_active_last_12_months",
+      "top_product:travel"
+    ],
+    "typical_quote": "I want to handle everything online — fast, simple, and transparent.",
+    "behavioral_summary": "Digital-first: handles as much as possible online by themselves"
+  }
+}

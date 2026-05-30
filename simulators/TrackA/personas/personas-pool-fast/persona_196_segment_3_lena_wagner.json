@@ -1,0 +1,92 @@
+{
+  "index": 196,
+  "segmentId": "segment_3",
+  "archetypeId": "peter",
+  "archetypeName": "Peter Wagner",
+  "seed": 1554291,
+  "profile": {
+    "persona_id": "segment_3",
+    "persona_name": "Lena Wagner",
+    "segment_name": "Service Affine",
+    "archetype_name": "Peter Wagner",
+    "sample_id": 20653,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 54,
+      "age_group": "50_59",
+      "gender": "female",
+      "urbanity": "countryside_pct",
+      "household_type": "two_person_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 2020,
+      "income_label": "below_average"
+    },
+    "financial_assets": [
+      "life_insurance_pension",
+      "building_savings",
+      "crypto"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 4,
+      "owned_products": [
+        "household",
+        "vehicle_liability",
+        "death",
+        "cyber"
+      ],
+      "intended_purchases_next_3y": [
+        "travel"
+      ],
+      "monthly_insurance_spend_eur": 303,
+      "has_health_insurance": false,
+      "switch_willingness": 24,
+      "advisor_type": "employed_insurance_advisor"
+    },
+    "top_decision_drivers": [
+      "compares_multiple_offers",
+      "willing_self_retention_for_lower_premium",
+      "price_performance_ratio",
+      "low_engagement_only_what_needed",
+      "broad_life_coverage"
+    ],
+    "top_purchase_criteria": [
+      "insurance_premium",
+      "advisor_competence",
+      "prior_positive_experience"
+    ],
+    "preferred_information_channels": [
+      "personal_advisor_broker",
+      "friends_acquaintances",
+      "customer_service",
+      "google_search"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "first_car"
+      ],
+      "planned_next_3_years": [
+        "buying_car"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "customer_service",
+      "offer_request": "customer_service",
+      "comparison": "customer_service",
+      "consultation": "customer_service",
+      "purchase": "customer_service",
+      "contract_questions": "customer_service",
+      "personal_info_update": "customer_service",
+      "contract_modification": "customer_service",
+      "contract_cancellation": "customer_service",
+      "payments_payouts": "customer_service",
+      "claim_reporting": "customer_service",
+      "claim_status": "customer_service"
+    },
+    "online_behavior": [
+      "top_product:travel"
+    ],
+    "typical_quote": "I don't want to deal with this — just tell me what I need.",
+    "behavioral_summary": "Advisor skepticism, yet need for help"
+  }
+}

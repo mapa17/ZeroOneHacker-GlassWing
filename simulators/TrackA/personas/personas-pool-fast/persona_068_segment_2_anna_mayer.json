@@ -1,0 +1,88 @@
+{
+  "index": 68,
+  "segmentId": "segment_2",
+  "archetypeId": "franz",
+  "archetypeName": "Franz Huber",
+  "seed": 539791,
+  "profile": {
+    "persona_id": "segment_2",
+    "persona_name": "Anna Mayer",
+    "segment_name": "Online Affine",
+    "archetype_name": "Franz Huber",
+    "sample_id": 98110,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 49,
+      "age_group": "40_49",
+      "gender": "female",
+      "urbanity": "city_pct",
+      "household_type": "in_partnership_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 2780,
+      "income_label": "below_average"
+    },
+    "financial_assets": [],
+    "insurance_behavior": {
+      "products_owned_count": 3,
+      "owned_products": [
+        "household",
+        "legal_protection",
+        "travel"
+      ],
+      "intended_purchases_next_3y": [],
+      "monthly_insurance_spend_eur": 150,
+      "has_health_insurance": false,
+      "switch_willingness": 16,
+      "advisor_type": "no_advisor"
+    },
+    "top_decision_drivers": [
+      "advised_at_life_events",
+      "willing_self_retention_for_lower_premium",
+      "low_engagement_only_what_needed",
+      "price_performance_ratio",
+      "personal_advisor_trust"
+    ],
+    "top_purchase_criteria": [
+      "price_performance",
+      "transparent_product_info",
+      "recommendation",
+      "online_purchase_option"
+    ],
+    "preferred_information_channels": [
+      "online_comparison_platforms",
+      "insurer_websites",
+      "family_and_friends",
+      "personal_advisor_broker",
+      "physical_branch"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "hospitalization_last_3y"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "job_change"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "self_online",
+      "comparison": "self_online",
+      "consultation": "self_online",
+      "purchase": "self_online",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "self_online",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "likely_to_purchase_online_next_3y",
+      "customer_portal_active_last_12_months"
+    ],
+    "typical_quote": "I want to handle everything online — fast, simple, and transparent.",
+    "behavioral_summary": "Low advisor loyalty — often no fixed contact person (47% no advisor)"
+  }
+}

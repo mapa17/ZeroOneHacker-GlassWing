@@ -1,0 +1,91 @@
+{
+  "index": 61,
+  "segmentId": "segment_2",
+  "archetypeId": "franz",
+  "archetypeName": "Franz Huber",
+  "seed": 484141,
+  "profile": {
+    "persona_id": "segment_2",
+    "persona_name": "Eva Moser",
+    "segment_name": "Online Affine",
+    "archetype_name": "Franz Huber",
+    "sample_id": 23470,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 28,
+      "age_group": "18_29",
+      "gender": "female",
+      "urbanity": "countryside_pct",
+      "household_type": "three_person_pct",
+      "education": "with_matura",
+      "income_monthly_eur": 3080,
+      "income_label": "average"
+    },
+    "financial_assets": [
+      "gold_precious_metals",
+      "building_savings"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 4,
+      "owned_products": [
+        "household",
+        "legal_protection",
+        "home_ownership",
+        "accident"
+      ],
+      "intended_purchases_next_3y": [
+        "legal_protection",
+        "death",
+        "motorcycle_moped"
+      ],
+      "monthly_insurance_spend_eur": 218,
+      "has_health_insurance": false,
+      "switch_willingness": 16,
+      "advisor_type": "employed_insurance_advisor"
+    },
+    "top_decision_drivers": [
+      "values_apps_and_portals",
+      "single_insurer_preference",
+      "tailored_products",
+      "broad_life_coverage",
+      "price_performance_ratio"
+    ],
+    "top_purchase_criteria": [
+      "digital_services_available",
+      "comprehensive_product",
+      "insurance_premium",
+      "transparent_product_info",
+      "price_performance"
+    ],
+    "preferred_information_channels": [
+      "online_comparison_platforms"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "moved_home"
+      ],
+      "planned_next_3_years": []
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "self_online",
+      "comparison": "self_online",
+      "consultation": "self_online",
+      "purchase": "self_online",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "self_online",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "likely_to_purchase_online_next_3y",
+      "customer_portal_active_last_12_months"
+    ],
+    "typical_quote": "I want to handle everything online — fast, simple, and transparent.",
+    "behavioral_summary": "Digital-first: handles as much as possible online by themselves"
+  }
+}

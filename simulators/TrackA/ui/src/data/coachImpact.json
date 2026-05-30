@@ -1,0 +1,207 @@
+{
+  "run": "live400",
+  "generatedAt": "2026-05-30T21:20:14.711Z",
+  "method": "Per-drop recovery-rate model. Recovery rates are tunable assumptions grounded in pattern analysis — validate with a real A/B test.",
+  "totals": {
+    "sessions": 400,
+    "purchasedBaseline": 31,
+    "droppedBaseline": 369,
+    "expectedRecovered": 55.6,
+    "projectedPurchased": 86.6
+  },
+  "conversion": {
+    "baselinePct": 7.8,
+    "projectedWithCoachPct": 21.7,
+    "upliftPp": 13.9,
+    "relativeUpliftPct": 178.2
+  },
+  "verdict": "Ja — der Coach hebt die Conversion projiziert um +13.9 Prozentpunkte (7.8% → 21.7%), v.a. durch Schritt-6-Absicherung und einen Online-Weg an der Tarif-Mauer.",
+  "topLevers": [
+    {
+      "reason": "advisory_wall",
+      "drops": 136,
+      "recoveryRate": 0.15,
+      "expectedRecovered": 20.4,
+      "intervention": "Start online anbieten / Plus per Beratung buchen statt Sackgasse"
+    },
+    {
+      "reason": "final_price_commitment",
+      "drops": 63,
+      "recoveryRate": 0.3,
+      "expectedRecovered": 18.9,
+      "intervention": "Abschluss absichern: Widerruf, fixer Preis, optional Rückruf — kein Tarifwechsel"
+    },
+    {
+      "reason": "want_to_compare",
+      "drops": 50,
+      "recoveryRate": 0.12,
+      "expectedRecovered": 6,
+      "intervention": "Vergleich/Angebot speichern, Markt-Einordnung zeigen"
+    },
+    {
+      "reason": "not_sure_applies",
+      "drops": 20,
+      "recoveryRate": 0.12,
+      "expectedRecovered": 2.4,
+      "intervention": "In einfacher Sprache erklären, welche Option passt"
+    },
+    {
+      "reason": "weak_value",
+      "drops": 22,
+      "recoveryRate": 0.1,
+      "expectedRecovered": 2.2,
+      "intervention": "Gegenwert konkret machen (€/Tag, was abgedeckt ist)"
+    }
+  ],
+  "byReason": [
+    {
+      "code": "advisory_wall",
+      "drops": 136,
+      "recoveryRate": 0.15,
+      "recovered": 20.4,
+      "intervention": "Start online anbieten / Plus per Beratung buchen statt Sackgasse",
+      "why": "Sie wollen passenden Schutz; ein klarer Online-Weg (Start/Optimal) rettet einen Teil.",
+      "recoveredPctOfReason": 15
+    },
+    {
+      "code": "final_price_commitment",
+      "drops": 63,
+      "recoveryRate": 0.3,
+      "recovered": 18.9,
+      "intervention": "Abschluss absichern: Widerruf, fixer Preis, optional Rückruf — kein Tarifwechsel",
+      "why": "Fast-Käufer auf Schritt 6 (32% kaufen hier ohnehin) — Verbindlichkeits-Angst ist gut adressierbar.",
+      "recoveredPctOfReason": 30
+    },
+    {
+      "code": "want_to_compare",
+      "drops": 50,
+      "recoveryRate": 0.12,
+      "recovered": 6,
+      "intervention": "Vergleich/Angebot speichern, Markt-Einordnung zeigen",
+      "why": "Vergleicher sind nicht ablehnend — Speichern + Einordnung hält sie.",
+      "recoveredPctOfReason": 12
+    },
+    {
+      "code": "not_sure_applies",
+      "drops": 20,
+      "recoveryRate": 0.12,
+      "recovered": 2.4,
+      "intervention": "In einfacher Sprache erklären, welche Option passt",
+      "why": "Unsicherheit ist mit Klartext-Hilfe lösbar.",
+      "recoveredPctOfReason": 12
+    },
+    {
+      "code": "weak_value",
+      "drops": 22,
+      "recoveryRate": 0.1,
+      "recovered": 2.2,
+      "intervention": "Gegenwert konkret machen (€/Tag, was abgedeckt ist)",
+      "why": "Preis-Leistung-Zweifel lassen sich teils mit Framing drehen.",
+      "recoveredPctOfReason": 10
+    },
+    {
+      "code": "complexity_overwhelm",
+      "drops": 15,
+      "recoveryRate": 0.15,
+      "recovered": 2.2,
+      "intervention": "Auf 1 Empfehlung reduzieren statt alle Optionen offen lassen",
+      "why": "Überforderung sinkt mit klarer Default-Empfehlung.",
+      "recoveredPctOfReason": 14.7
+    },
+    {
+      "code": "prefer_human",
+      "drops": 38,
+      "recoveryRate": 0.04,
+      "recovered": 1.5,
+      "intervention": "Rückruf/Chat anbieten (zählt meist als Beratung, nicht online)",
+      "why": "Will überwiegend einen Menschen — kaum Online-Rettung.",
+      "recoveredPctOfReason": 3.9
+    },
+    {
+      "code": "data_privacy_fatigue",
+      "drops": 13,
+      "recoveryRate": 0.1,
+      "recovered": 1.3,
+      "intervention": "Felder reduzieren, Fortschritt + Datenschutz transparent zeigen",
+      "why": "Formular-Müdigkeit ist UX-seitig adressierbar.",
+      "recoveredPctOfReason": 10
+    },
+    {
+      "code": "price_vs_income",
+      "drops": 9,
+      "recoveryRate": 0.06,
+      "recovered": 0.5,
+      "intervention": "Günstigeren Start-Tarif + €/Tag-Framing zeigen",
+      "why": "Echte Budget-Grenze — nur kleiner Teil über günstigeren Tarif erreichbar.",
+      "recoveredPctOfReason": 5.6
+    },
+    {
+      "code": "other",
+      "drops": 2,
+      "recoveryRate": 0.05,
+      "recovered": 0.1,
+      "intervention": "Kontexthilfe + Rückfrage",
+      "why": "Unspezifisch — moderate Annahme.",
+      "recoveredPctOfReason": 5
+    },
+    {
+      "code": "no_felt_need",
+      "drops": 1,
+      "recoveryRate": 0.03,
+      "recovered": 0,
+      "intervention": "Akut-Nutzen/Anlass aufzeigen",
+      "why": "Kein akuter Bedarf — schwer kurzfristig zu drehen.",
+      "recoveredPctOfReason": 0
+    }
+  ],
+  "byStep": [
+    {
+      "step": 0,
+      "drops": 21,
+      "recovered": 1.8
+    },
+    {
+      "step": 1,
+      "drops": 13,
+      "recovered": 0.8
+    },
+    {
+      "step": 2,
+      "drops": 29,
+      "recovered": 2
+    },
+    {
+      "step": 3,
+      "drops": 215,
+      "recovered": 29.4
+    },
+    {
+      "step": 4,
+      "drops": 23,
+      "recovered": 2.3
+    },
+    {
+      "step": 5,
+      "drops": 2,
+      "recovered": 0.2
+    },
+    {
+      "step": 6,
+      "drops": 66,
+      "recovered": 19.1
+    }
+  ],
+  "recoveryRates": {
+    "final_price_commitment": 0.3,
+    "advisory_wall": 0.15,
+    "want_to_compare": 0.12,
+    "complexity_overwhelm": 0.15,
+    "not_sure_applies": 0.12,
+    "weak_value": 0.1,
+    "price_vs_income": 0.06,
+    "data_privacy_fatigue": 0.1,
+    "prefer_human": 0.04,
+    "no_felt_need": 0.03,
+    "other": 0.05
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "index": 12,
+  "segmentId": "segment_1",
+  "archetypeId": "judith",
+  "archetypeName": "Judith Berger",
+  "seed": 96451,
+  "profile": {
+    "persona_id": "segment_1",
+    "persona_name": "Lena Berger",
+    "segment_name": "Rising Hybrids",
+    "archetype_name": "Judith Berger",
+    "sample_id": 77649,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 26,
+      "age_group": "18_29",
+      "gender": "female",
+      "urbanity": "city_pct",
+      "household_type": "with_children_pct",
+      "education": "without_matura",
+      "income_monthly_eur": 2710,
+      "income_label": "below_average"
+    },
+    "financial_assets": [
+      "life_insurance_pension",
+      "valuables",
+      "additional_real_estate"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 10,
+      "owned_products": [
+        "household",
+        "vehicle_liability",
+        "legal_protection",
+        "vehicle_comprehensive",
+        "accident",
+        "life_pension",
+        "home_ownership",
+        "health",
+        "travel",
+        "care"
+      ],
+      "intended_purchases_next_3y": [
+        "electronics"
+      ],
+      "monthly_insurance_spend_eur": 496,
+      "has_health_insurance": true,
+      "switch_willingness": 7,
+      "advisor_type": "general_agent"
+    },
+    "top_decision_drivers": [
+      "price_performance_ratio",
+      "broad_life_coverage",
+      "tailored_products",
+      "personal_advisor_trust",
+      "low_engagement_only_what_needed"
+    ],
+    "top_purchase_criteria": [
+      "transparent_product_info",
+      "company_image",
+      "price_performance",
+      "digital_services_available",
+      "comprehensive_product"
+    ],
+    "preferred_information_channels": [
+      "friends_acquaintances"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "started_financial_planning_for_future"
+      ],
+      "planned_next_3_years": [
+        "more_sports",
+        "losing_weight",
+        "job_change"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "via_advisor",
+      "comparison": "self_online",
+      "consultation": "via_advisor",
+      "purchase": "via_advisor",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "via_advisor",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online",
+      "customer_portal_active_last_12_months",
+      "top_product:vehicle_liability"
+    ],
+    "typical_quote": "I prefer to research things myself online — but for important decisions I want someone I can trust.",
+    "behavioral_summary": "Places high value on trust and competence of advisor"
+  }
+}

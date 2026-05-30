@@ -1,0 +1,102 @@
+{
+  "index": 37,
+  "segmentId": "segment_1",
+  "archetypeId": "judith",
+  "archetypeName": "Judith Berger",
+  "seed": 295201,
+  "profile": {
+    "persona_id": "segment_1",
+    "persona_name": "Elena Wagner",
+    "segment_name": "Rising Hybrids",
+    "archetype_name": "Judith Berger",
+    "sample_id": 48727,
+    "generated_at": "2026-05-30",
+    "demographics": {
+      "age": 68,
+      "age_group": "60_75",
+      "gender": "female",
+      "urbanity": "city_pct",
+      "household_type": "single_divorced_widowed_pct",
+      "education": "with_matura",
+      "income_monthly_eur": 4530,
+      "income_label": "above_average"
+    },
+    "financial_assets": [
+      "securities",
+      "real_estate",
+      "additional_real_estate"
+    ],
+    "insurance_behavior": {
+      "products_owned_count": 7,
+      "owned_products": [
+        "household",
+        "legal_protection",
+        "vehicle_comprehensive",
+        "home_ownership",
+        "health",
+        "occupational_disability",
+        "care"
+      ],
+      "intended_purchases_next_3y": [
+        "accident"
+      ],
+      "monthly_insurance_spend_eur": 202,
+      "has_health_insurance": true,
+      "switch_willingness": 7,
+      "advisor_type": "independent_broker"
+    },
+    "top_decision_drivers": [
+      "price_performance_ratio",
+      "broad_life_coverage",
+      "advised_at_life_events",
+      "tailored_products",
+      "personal_advisor_trust"
+    ],
+    "top_purchase_criteria": [
+      "recommendation",
+      "relevant_add_on_services",
+      "transparent_product_info",
+      "prior_positive_experience"
+    ],
+    "preferred_information_channels": [
+      "personal_advisor_broker",
+      "online_comparison_platforms",
+      "friends_acquaintances"
+    ],
+    "life_events_and_plans": {
+      "experienced_last_5_years": [
+        "minor_physical_complaints",
+        "started_investing"
+      ],
+      "planned_next_3_years": [
+        "buying_car",
+        "losing_weight",
+        "increased_preventive_checkups"
+      ]
+    },
+    "channel_preferences": {
+      "info_gathering": "self_online",
+      "offer_request": "via_advisor",
+      "comparison": "self_online",
+      "consultation": "via_advisor",
+      "purchase": "via_advisor",
+      "contract_questions": "self_online",
+      "personal_info_update": "self_online",
+      "contract_modification": "via_advisor",
+      "contract_cancellation": "self_online",
+      "payments_payouts": "self_online",
+      "claim_reporting": "self_online",
+      "claim_status": "self_online"
+    },
+    "online_behavior": [
+      "ever_purchased_insurance_online",
+      "customer_portal_registered",
+      "customer_portal_active_last_12_months",
+      "top_product:vehicle_liability",
+      "top_product:pet",
+      "top_product:legal_protection"
+    ],
+    "typical_quote": "I prefer to research things myself online — but for important decisions I want someone I can trust.",
+    "behavioral_summary": "Researches independently (online, comparison)"
+  }
+}
