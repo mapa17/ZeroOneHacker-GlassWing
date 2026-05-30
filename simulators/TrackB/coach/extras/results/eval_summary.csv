@@ -1,0 +1,4 @@
+persona,segment,converted_OFF,converted_ON,uplift,qualified_counts_handoff,state_recovery,acted_before_exit,abandon_precision,abandon_recall,annoyance_rate
+franz,S2,0,1,1,False,0.81,0,1.0,0.5,0.0
+judith,S1,0,0,0,True,0.25,0,1.0,0.0,0.0
+peter,S3,0,1,1,True,0.57,1,1.0,0.0,0.0
