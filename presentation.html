@@ -199,19 +199,19 @@
       <div class="team-grid">
         <div class="member">
           <div class="avatar" id="av1">
-            <img src="../../docs/Vladislav_Dolgov.webp" alt="Vladislav Dolgov">
+            <img src="./docs/Vladislav_Dolgov.webp" alt="Vladislav Dolgov">
           </div>
           <div class="member-name">Vladislav Dolgov</div>
         </div>
         <div class="member">
           <div class="avatar" id="av2">
-            <img src="../../docs/Vladyslav_Shundryk.webp" alt="Vladyslav Shundryk">
+            <img src="./docs/Vladyslav_Shundryk.webp" alt="Vladyslav Shundryk">
           </div>
           <div class="member-name">Vladyslav Shundryk</div>
         </div>
         <div class="member">
           <div class="avatar" id="av3">
-            <img src="../../docs/Pasieka_Manuel.png" alt="Manuel Pasieka">
+            <img src="./docs/Pasieka_Manuel.png" alt="Manuel Pasieka">
           </div>
           <div class="member-name">Manuel Pasieka</div>
         </div>
@@ -559,12 +559,22 @@
         <div class="card" style="border-color:rgba(88,166,255,.4); flex:1;">
           <div class="tag tag-blue">Track A</div>
           <h3>Synthetic reasoning</h3>
-          <div class="result-placeholder">Results to be added</div>
+          <ul style="margin-top:8px;">
+            <li>AI personas walk through the real UNIQA form, revealing <strong>where and why</strong> people drop off — through choices, hesitations, and step-level reasoning, not just aggregate numbers</li>
+            <li>Added a <strong>live chat helper</strong> that reads the user's actual selections and page behaviour, giving targeted advice instead of generic messages</li>
+            <li>Replaying <strong>50 prior drop-offs</strong> with the helper enabled: ~<strong style="color:var(--accent2);">10% completed</strong> the purchase, a <strong style="color:var(--accent2);">third progressed further</strong> than before</li>
+            <li>Coach helps most when users are <strong>confused early on</strong>; struggles when the real blocker is price or "I want to compare first"</li>
+          </ul>
         </div>
         <div class="card" style="border-color:rgba(63,185,80,.4); flex:1;">
           <div class="tag tag-green">Track B</div>
           <h3>Persona modeling</h3>
-          <div class="result-placeholder">Results to be added</div>
+          <ul style="margin-top:8px;">
+            <li>Completion rate lifted from <strong style="color:var(--accent2);">0/3 → 2/3</strong> at-risk users, at <strong style="color:var(--accent2);">0.00 annoyance</strong> — Franz (price-shock) saved, Peter (overwhelmed) simplified, Judith (won't convert) correctly left alone</li>
+            <li>Abandon-precision <strong style="color:var(--accent2);">1.00</strong> — every abandonment call was correct</li>
+            <li><strong>0 crashes, 0% mis-routes</strong> across 6,000 noisy trajectories — seeded &amp; fully reproducible</li>
+            <li>Behaviour-only signals (dwell, back-clicks, selections, hovers) → 5 states → action. <strong>Never reads a label</strong></li>
+          </ul>
         </div>
         <div class="card" style="border-color:rgba(210,168,255,.4); flex:1;">
           <div class="tag tag-purple">Track C</div>
@@ -587,9 +597,18 @@
         <h2>Learnings</h2>
         <div class="divider"></div>
       </div>
-      <div class="card" style="width:100%; min-height:200px;">
-        <div class="result-placeholder" style="min-height:160px;">
-          Learnings to be added
+      <div class="col" style="width:100%; gap:12px;">
+        <div class="card" style="border-color:rgba(88,166,255,.3);">
+          <div class="tag tag-blue">Drop-off patterns</div>
+          <p>Users leave for a few clear reasons: wrong product chosen at the start, tariffs that require a call, or hesitation at the final price. This only became visible when AI personas walked the real form — not from dashboard numbers alone. A targeted chat helper converted <strong>10%</strong> of prior drop-offs and moved a <strong>third further</strong> through the funnel, mostly by resolving confusion and surfacing online options — not by changing minds about price.</p>
+        </div>
+        <div class="card" style="border-color:rgba(247,129,102,.3);">
+          <div class="tag tag-orange">LLM simulation limits</div>
+          <p>An LLM cannot reliably simulate <strong>micro-behaviour</strong> — mouse movements, click hesitation, dwell time — directly from persona profiles. The profiles shape reasoning and choices, but low-level interaction signals require a different approach.</p>
+        </div>
+        <div class="card" style="border-color:rgba(210,168,255,.3);">
+          <div class="tag tag-purple">When to speak, when to stay silent</div>
+          <p>People quit forms when help feels pushy. The hard part was not detecting who was stuck — it was <strong>knowing when to stay quiet</strong>. Reading behaviour, not labels, let us assist the few who needed it without annoying everyone else.</p>
         </div>
       </div>
     </div>
