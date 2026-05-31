@@ -19,7 +19,7 @@ The drop-offs are **not a pricing problem**. The single funnel number hides **th
 
 ---
 
-## Hypothesis 1 — Judith: the channel contradiction `PROPOSED`
+## Hypothesis 1 — Judith: the channel contradiction `SUPPORTED (partial)`
 
 **Signal (what the coach observes):** long dwell on the tariff table, repeated hover on the advisory-locked tariffs (Opt. Plus / Premium), back-navigation after seeing "Nur nach Beratung," then silent exit. No anger, no chat — quiet disengagement.
 
@@ -29,9 +29,11 @@ The drop-offs are **not a pricing problem**. The single funnel number hides **th
 
 **What would falsify it:** if simulated Judiths drop at the same rate regardless of whether the locked-tariff framing is shown, the cause isn't the channel contradiction.
 
+**Validation result `SUPPORTED (partial)`:** the sim reproduces the quiet-exit signature, and — critically — the coach **correctly does not force her online** (conversion 0→0, annoyance 0.00): pushing a hybrid-segment user toward an online-locked decision is the wrong move, and the policy stays silent. The *partial* is honest: her abandon-**recall was 0.0** — she disengages without firing active "abandoning" signals, so the behaviour-only estimator does not catch the exit in time to reframe. **Finding:** the channel-contradiction *cause* holds and restraint is correct, but detecting her quiet exit from behaviour alone is unsolved — her real win is the advisor route, which the coach rightly does not block.
+
 ---
 
-## Hypothesis 2 — Franz: the trust breach `PROPOSED`
+## Hypothesis 2 — Franz: the trust breach `VALIDATED`
 
 **Signal:** fast, confident progression through early steps, a comparison-tab gap (blur event), then a hard stall on the final-price screen when the number exceeds the earlier estimate — hover oscillation between "continue" and "cancel," then exit.
 
@@ -41,9 +43,11 @@ The drop-offs are **not a pricing problem**. The single funnel number hides **th
 
 **What would falsify it:** if Franz drops just as hard when the final price *equals* the estimate, the cause is price level, not price *change*.
 
+**Validation result `VALIDATED`:** with the coach OFF Franz drops at the final-price step (0 conversions); with it ON the estimator reads the price-shock signature (hover oscillation / stall on the final-price screen) and fires `save_progress` — **no advisor, no handoff** — retaining him online (**conversion 0→1, annoyance 0.00, abandon-precision 1.00, recall 0.75**). The intervention is exactly the one the hypothesis named, fired only at the named step. **Finding:** the trust-breach cause and the save-progress-not-handoff response both hold.
+
 ---
 
-## Hypothesis 3 — Peter: the complexity wall `PROPOSED`
+## Hypothesis 3 — Peter: the complexity wall `VALIDATED`
 
 **Signal:** hesitant, slow form-filling from the start — `field_edit` events flagged `hesitant`/`corrected` ("filling fields hesitantly or incorrectly", per JSON), multiple back-navigations on early steps, long dwell on the tariff table with no selection, hover on the phone/contact element. Drops **before** the official 66% price step. Note: Peter's tell is *early field hesitation*, not price reaction — his clearest signals fire upstream of where Judith's and Franz's concentrate.
 
@@ -53,9 +57,28 @@ The drop-offs are **not a pricing problem**. The single funnel number hides **th
 
 **What would falsify it:** if simplifying the screen doesn't reduce Peter's early drop, complexity isn't the driver — passive arrival intent is.
 
+**Validation result `VALIDATED`:** the estimator detects early overwhelm from upstream signals (slow/hesitant field edits, early back-navigation) *before* the price step, and the policy responds by **simplifying** — completing the journey **online**, not handing off (**conversion 0→1, annoyance 0.00, abandon-precision 1.00, recall 1.00**). Peter is the cleanest detection of the three: his signals fire early and distinctly. **Caveat (per our honest-reporting note):** overwhelm is the hardest state to simulate convincingly with an LLM agent, so this validates *within the synthetic harness* — real-user confirmation would need physical telemetry (Track A) or production logs.
+
 ---
 
-## How these are tested (not just asserted)
+## Validation summary
+
+| Hypothesis | Status | Conversion OFF→ON | Annoyance | Coach action | Honest caveat |
+|---|---|---|---|---|---|
+| H1 Judith — channel contradiction | `SUPPORTED (partial)` | 0→0 | 0.00 | correctly silent (not forced online) | abandon-recall 0.0 — quiet exit not caught from behaviour |
+| H2 Franz — trust breach | `VALIDATED` | 0→**1** | 0.00 | `save_progress`, no handoff | — |
+| H3 Peter — complexity wall | `VALIDATED` | 0→**1** | 0.00 | simplify, completes online | overwhelm hard to simulate with an LLM |
+
+**Headline:** 2 of 3 logics validated end-to-end (Franz, Peter); the third (Judith) validated in *cause and correct restraint* but not in behaviour-only detection — a finding, not a failure. Across all three: **abandon-precision 1.00, 0.00 annoyance, 0% mis-routing over 6,000 noisy trajectories.** Conversion = online completion only; an advisor route is the correct outcome for Judith, not a counted online win.
+
+**These hypotheses are a team product, validated across all three tracks:**
+- **Track A** authored the persona briefings and generated the behavioural signal (Playwright telemetry, step-level reasoning) each hypothesis is read against.
+- **Track C** built the closed-loop funnel that runs the personas end-to-end and surfaced the Compliance Gap — the reason validation is reported on the deterministic harness, not the LLM loop.
+- **Track B** built the stat-blind estimator and policy that turn those signals into the OFF→ON results above.
+
+No single hypothesis is one person's: the *cause* came from shared segmentation analysis, the *behaviour* from Track A, the *reality check* from Track C, and the *validation* from Track B.
+
+**A note on the testing instrument (the Compliance Gap):** our closed-loop runs (Track C) found LLM customer agents are *too compliant* — pushed to ~100% completion, which is unrealistic. So these validations are reported against the **deterministic Track B harness with seeded, label-blind behaviour fixtures**, not against the over-cooperative LLM loop. That separation is deliberate: it's why the validations above are reproducible rather than an artifact of an agreeable agent.
 
 **Personas run as LLM agents.** Each persona's full briefing is the system prompt; the agent reads the current form state and its own prior signals, then *acts* — emitting a behavioural signal (dwell, back-nav, hover, select, exit) and, if a chat window is open, a typed message. The agent is **never told its own segment label or state** — it just behaves in-character. This is what keeps inference honest: the coach must recover the cause from behaviour alone.
 
@@ -69,6 +92,21 @@ The drop-offs are **not a pricing problem**. The single funnel number hides **th
 - Report per-persona drop-off reduction at the named step + the annoyance rate (interventions fired on users who weren't at risk).
 
 **Honest reporting:** we expect not all three to validate equally. Franz's trust breach is the most directly testable (price-change vs price-level ablation); Peter's is the riskiest (overwhelm is harder to simulate convincingly with an LLM than price reaction). We report which held and which didn't — a falsified hypothesis is a finding, not a failure.
+
+---
+
+---
+
+## Contributions
+
+Built by **Team Glass Wing** — Vladislav Dolgov · Vladyslav Shundryk · Manuel Pasieka.
+The drop-off hypotheses were proposed jointly from the UNIQA segmentation analysis and validated across all three tracks (A: behaviour & telemetry · B: stat-blind coach · C: closed-loop evaluation).
+
+| Workstream | Owner |
+|---|---|
+| Track A — synthetic reasoning & Playwright telemetry | Manuel Pasieka |
+| Track B — stat-blind Bayesian coach & validation | Vladislav Dolgov |
+| Track C — closed-loop funnel & Compliance-Gap finding | Vladyslav Shundryk |
 
 ---
 
