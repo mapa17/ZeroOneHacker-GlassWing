@@ -20,7 +20,7 @@ Three archetypal personas — *Judith* (hybrid, ~30% of traffic), *Franz* (digit
 
 ### How the coach works
 
-The coach LLM receives background context on all three persona archetypes, their motivations, and a per-step playbook. After each customer action it observes the updated form state and decides whether to send a short message or stay silent. It must always warn when the current selections would route the customer to an advisor (blocking online completion); otherwise it speaks only when it adds genuine value — and stays silent for friction-averse personas on a clear online path.
+The coach receives context on users actions on the web app to be able to infer to three persona archetypes, their motivations, and a per-step playbook. After each customer action it observes the updated form state and decides whether to send a short message or stay silent. It must always warn when the current selections would route the customer to an advisor (blocking online completion); otherwise it speaks only when it adds genuine value — and stays silent for friction-averse personas on a clear online path.
 
 ---
 
