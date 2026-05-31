@@ -1,169 +1,140 @@
 # Team Glass Wing — Jury Report
 ### Zero One Hacker 2026 · UNIQA Online Funnel Drop-off Analysis & Adaptive AI Coach
+**Team:** Vladislav Dolgov · Vladyslav Shundryk · Manuel Pasieka
 
 ---
 
 ## 📝 TL;DR
-We built a multi-track simulation harness for the 9-step branching **UNIQA Privatarzt** online health insurance quote funnel to analyze why users drop off and how to retain them. The system features LLM-driven customer personas with demographic-aligned qualitative reasoning (Track A), a Python-based **stat-blind Bayesian state estimator** that infers user friction states purely from telemetry (Track B), and a closed-loop React/Vite web harness with a deterministic advisor warning coach (Track C). Our key finding was the **"LLM Compliance Gap"** (where LLM agents are too easily nudged to ~100% completion), though our stat-blind Python coach successfully demonstrated a lift from **0/3 to 2/3 at-risk persona conversions with a 0.00 annoyance rate**.
+We built a multi-track simulation harness for the 9-step branching **UNIQA Privatarzt** online quote funnel to analyse *why* users drop off and how to retain them through the right channel. Three interlocking tracks: **Track A** drives LLM customer personas with demographic-aligned reasoning and generates realistic UI telemetry; **Track C** runs the full closed loop and surfaces our key scientific finding — the **"LLM Compliance Gap"** (LLM agents are too easily nudged, hitting ~100% completion, which overstates coach value); and **Track B** answers that gap with a **stat-blind Bayesian coach** that reads behaviour only — never a segment label — and demonstrated a lift of **0/3 → 2/3 at-risk online conversions at 0.00 annoyance**, fully deterministic and reproducible. Together: A makes the behaviour, C shows where naive LLM evaluation breaks, B provides the measurable, label-blind alternative.
 
 ---
 
 ## 🎯 Problem
-UNIQA's online calculator loses **~94% of digital starters** (yielding a low 5.6% conversion rate). The heaviest drops occur at the initial price presentation (step 3: 66% drop) and the final prior-insurance check (step 6: 78% drop). Standard funnel analytics record *where* users leave but fail to explain *why*—treating all drop-offs identically. 
+UNIQA's online calculator loses the majority of digital starters, and standard funnel analytics record *where* users leave but not *why* — treating every drop-off the same. (Funnel percentages cited in the deck are drawn from the UNIQA brief / dataset.)
 
-Our core insight is that **a single drop-off number hides three distinct behavioral failures** affecting three customer segments:
-1.  **Judith (Segment 1 - 30%):** Drops at the initial price due to a *channel contradiction* (the specific tariff she trusts an advisor to sell her is online-locked).
-2.  **Franz (Segment 2 - 50%):** Drops at the final price due to a *trust breach* (the price changes because of insurance history).
-3.  **Peter (Segment 3 - 20%):** Drops early due to a *complexity wall* (the input fields and birth date/SV forms overwhelm him).
+Our core insight: **a single drop-off number hides three distinct behavioural failures**, each needing a different response —
+1. **Judith (S1 — ~30%, hybrid):** drops at the initial price via a *channel contradiction* — the tariff she trusts an advisor to sell is online-locked. Her right channel is the advisor.
+2. **Franz (S2 — ~50%, digital):** drops at the final price via a *trust breach* — the price changes due to insurance history. Winnable online if reassured.
+3. **Peter (S3 — ~20%, service):** drops early via a *complexity wall* — the forms overwhelm him. Winnable online if simplified.
 
-To design high-yield interventions, we needed to simulate these qualitative failure modes and build an adaptive coach layer that infers *which* failure is happening live, routing the customer to the correct channel rather than pushing blanket online conversions.
+The goal is **right-channel retention**: keep the winnable users completing online, and don't badger the users whose real path is offline. That requires inferring *which* failure is happening live — which is what the three tracks were built to do.
 
 ---
 
 ## 🧭 Approach
-We split our engineering pipeline into three parallel tracks to transition from qualitative user reasoning to deterministic mathematical control:
+Three parallel tracks, moving from qualitative user reasoning → realistic telemetry → deterministic control and honest evaluation.
 
-*   **Track A: Synthetic User Reasoning & UI Telemetry**
-    *   **Qualitative Reason Prompting:** We linked sampled demographics (age, income, channel preference) from survey distributions directly to a step-level reasoning pipeline. The headless agent outputs structured JSON choices alongside a German-language *Begründung* explaining its internal hesitation and price sensitivity.
-    *   **UI Automation & Telemetry:** We automated live browser click-throughs via Playwright to generate realistic mouse movements, hovers, and dwell times. We built a live chat assistant that reads active selections and page behavior to deliver contextual advice.
-*   **Track B: Stat-Blind Bayesian State Estimation (Python Coach)**
-    *   **Stat-Blind Estimator:** Instead of reading segment labels, we built a Python-only engine that infers user states (`orienting`, `evaluating`, `overwhelmed`, `ready`, `abandoning`) purely from noisy behavior signals (dwell timers, back-clicks, hovers, and selections).
-    *   **Transparent Decision Policy:** The estimator updates a belief vector multiplicatively ($B \propto B \times P(\text{signal}|\text{state})$) with entropy decay to stay responsive to mid-session changes. A policy maps this to response tiers (`silent`, `ambient`, `inline`, `prompted`, `active`) with a mandatory human-readable reason, prioritizing silence for low-risk users.
-*   **Track C: Closed-Loop Evaluation & The Realism Benchmark (Vite/Node App)**
-    *   **Closed-Loop React Harness:** We cloned the 9-step branching Privatarzt funnel in React 19 / Vite 8 and linked it headlessly to a Node.js CLI agent simulator (`run-interactive-agent.mjs`) driven by Claude/GPT.
-    *   **Advisor Warnings:** We implemented a deterministic JavaScript coach banner (`coach.js`) that intercepts the LLM customer and displays warning banners when advisor-routing is triggered, prompting them to reconsider.
+* **Track A — Synthetic user reasoning & UI telemetry.** Sampled demographics (age, income, channel preference) from survey distributions feed a step-level reasoning pipeline; the headless agent emits structured JSON choices plus a German *Begründung* explaining its hesitation and price sensitivity. Live browser click-throughs via **Playwright** generate realistic mouse movement, hovers, and dwell times — the physical signal layer the other tracks consume. A live chat helper reads active selections and page behaviour to offer contextual advice.
+* **Track B — Stat-blind Bayesian state estimation (Python coach).** A Python-only engine infers user states (`orienting`, `evaluating`, `overwhelmed`, `ready`, `abandoning`) purely from noisy behaviour — dwell, back-clicks, hovers, selections — **never reading a segment label ("the wall")**. The belief vector updates multiplicatively (B ∝ B × P(signal | state)) with entropy decay to stay responsive to mid-session change; a transparent policy maps belief to tiers (`silent`, `ambient`, `inline`, `prompted`, `active`) with a mandatory human-readable reason, prioritising silence for low-risk users.
+* **Track C — Closed-loop evaluation & the realism benchmark (Vite/Node app).** A React 19 / Vite 8 clone of the 9-step branching funnel, linked headlessly to a Node CLI agent simulator (`run-interactive-agent.mjs`) driven by an LLM, plus a deterministic JavaScript coach banner (`coach.js`) that warns when advisor-routing would block online completion. This is where the full loop runs end-to-end and where we measured whether the coach actually shifts completion vs. a no-coach baseline.
 
 ---
 
 ## 💻 How to Run It
 
-### 🐍 1. Track B — Bayesian Coach Demo (Python)
-The Bayesian state estimator, demo spine, and parameter sweep are located in `simulators/TrackB/coach/`.
-
+### 🧪 Track A — Synthetic Reasoning & Playwright UI  (`simulators/TrackA/`)
 ```bash
-# Navigate to Track B's coach folder
-cd simulators/TrackB/coach
-
-# Install minimal dependencies
-pip install -r requirements.txt
-
-# Run the standalone demo (prints belief vectors & coach decisions per persona)
-python run_demo.py --persona all
-
-# Run the evaluation harness (generates OFF vs ON metric comparisons in extras/results/)
-python eval_harness.py
-
-# Run the unit test suite (validates estimator invariants and contract interfaces)
-python -m pytest tests/ -q
-```
-
-### ⚛️ 2. Track C — Full Web App & CLI Simulation (JavaScript)
-The React funnel dashboard and headless CLI pipeline are located in `simulators/TrackC/`.
-
-```bash
-# Navigate to Track C's root folder
-cd simulators/TrackC
-
-# Install dependencies (React, Vite, Lucide)
-npm install
-
-# Copy environment variables and configure your OPENAI_API_KEY
-cp .env.example .env
-# Open .env and set: OPENAI_API_KEY=sk-...
-
-# Run the React 19 visual web app (Dashboard, Funnel UI, Logs Panel)
-npm run dev
-# Open http://localhost:5173
-
-# --- Headless CLI Interactive Agent Simulation Pipeline ---
-# Step A: Sample persona profiles from survey distributions
-npm run profiles:sample -- --n 10 --seed 1
-
-# Step B: Generate grounded system prompts using OpenAI (replaces <runId> with the timestamp printed above)
-npm run persona:prompts -- --run <runId>
-
-# Step C: Run the step-by-step LLM simulation loop with the coach enabled
-npm run agent:interactive -- --run <runId> --verbose --enable-coach
-
-# Step D: Analyze the drop-off and exit telemetry outputs
-npm run agent:analyze -- --run <runId>
-```
-
-### 🧪 3. Track A — Synthetic Reasoning & Playwright UI
-The Playwright automation and live coach chat helper are located in `simulators/TrackA/`.
-
-```bash
-# Navigate to Track A folders
 cd simulators/TrackA/personas
-npm install
-npx playwright install chromium
-
-# Create persona pool files
+npm install && npx playwright install chromium
 npm run create -- --n 10
-
-# Run Playwright UI browser simulations with real mouse/click telemetry
-# (Make sure to start the Track A UI dev server under simulators/TrackA/ui first!)
+# start the Track A UI dev server under simulators/TrackA/ui first
 npm run live -- --run live_run_01 --limit 10 --concurrency 2
+```
+
+### 🐍 Track B — Bayesian Coach Demo  (`simulators/TrackB/coach/`)
+```bash
+cd simulators/TrackB/coach
+pip install -r requirements.txt
+python run_demo.py --persona all     # belief vectors & coach decisions per persona
+python eval_harness.py               # OFF vs ON metrics → extras/results/
+python -m pytest tests/ -q           # estimator + contract invariants
+python rank_full_engine.py           # precision/recall dial → extras/results/
+```
+
+### ⚛️ Track C — Full Web App & CLI Simulation  (`simulators/TrackC/`)
+```bash
+cd simulators/TrackC
+npm install
+cp .env.example .env                 # set OPENAI_API_KEY=sk-...
+npm run dev                          # React web app → http://localhost:5173
+# headless CLI pipeline
+npm run profiles:sample -- --n 10 --seed 1
+npm run persona:prompts -- --run <runId>
+npm run agent:interactive -- --run <runId> --verbose --enable-coach
+npm run agent:analyze -- --run <runId>
 ```
 
 ---
 
 ## 📈 Results
 
-### 1. Track B — Python Bayesian Coach Performance
-We evaluated identical scripted journeys across three personas with the Python coach turned **OFF** vs. **ON**:
+**Cross-track synthesis.** Track C's closed loop produced our headline scientific finding — naive LLM-in-the-loop evaluation is unreliable because the agent is *too compliant*. Track A confirmed that only **physically generated** telemetry (real mouse/hover/dwell) is trustworthy signal. Track B took that lesson and built a coach that depends on neither a compliant LLM nor a segment label — and proved a measurable, reproducible lift. The three results are strongest read together.
 
-| Persona | Segment | Conversion OFF → ON | State-Recovery Accuracy | Annoyance Rate | Tactical Interventions |
-|---|---|---|---|---|---|
-| **Franz** | S2 (Digital) | 0 → **1** (+1) | 0.67 | 0.00 | Caught at final price; triggered `save_progress` to prevent advisor routing. |
-| **Peter** | S3 (Service) | 0 → **1** (+1) | 0.83 | 0.00 | Early overwhelm detected; gracefully exited and handed off to human support. |
-| **Judith**| S1 (Hybrid) | 0 → 0 (+0) | 0.38 | 0.00 | **Deliberately left alone**; segment requires advisor support, silence maintained. |
+### Track A — Telemetry & live-helper impact
+Replaying **50 prior drop-offs** with the telemetry-aware chat helper enabled produced **~10% purchase completion** and **roughly a third progressing significantly further** than baseline. The helper won by clarifying form inputs early but could not overcome hard price objections — an early signal that *complexity* failures (Peter) are coachable while *trust/price* failures (Franz) need more than clarification. *(Track A lane — raw outputs in the Track A run logs.)*
 
-*   **Headline Metric:** **0/3 → 2/3 Conversions, 0.00 Annoyance.** The Judith zero is a designed feature, not a failure: her segment relies on offline advisors, and the coach correctly stayed silent rather than badgering her.
-*   **Mathematical Precision:** The estimator achieved a **1.00 abandon-precision** and **0% mis-routing across 6,000 simulated noisy trajectories**.
-*   **Leonardo CPU Param-Sweep:** Sweeping entropy decay/likelihood floors over a 25-point grid revealed a strict **accuracy-vs-decisiveness trade-off**. High decay rates raise per-call accuracy but decrease the coach action frequency (action rate drops from 0.60 to 0.35).
+### Track B — Stat-blind Bayesian coach
+Identical scripted journeys per persona, coach **OFF** vs **ON**. Conversion = **online completion**; within this harness an advisor handoff is scored as out-of-scope, and the coach never forces a user online. Values match the shipped `extras/results/eval_summary.csv`.
 
-### 2. Track A — Live Chat Helper Impact
-*   Replaying **50 prior user drop-offs** with the telemetry-aware chat helper enabled led to **~10% purchase completion** and **a third progressing significantly further** than their baseline. The helper succeeded by clarifying form inputs early but could not overcome price objections.
+| Persona | Segment | Conversion OFF → ON | Abandon precision | Abandon recall | Annoyance | Intervention |
+|---|---|---|---|---|---|---|
+| **Franz** | S2 (Digital) | 0 → **1** | 1.00 | 0.75 | 0.00 | Caught at final price; `save_progress` keeps him on the online path. |
+| **Peter** | S3 (Service) | 0 → **1** | 1.00 | 1.00 | 0.00 | Early overwhelm; step **simplified**, completes **online**. |
+| **Judith**| S1 (Hybrid) | 0 → 0 | 1.00 | 0.00 | 0.00 | **Deliberately left alone** — her right channel is the advisor, not a forced online sale. |
 
-### 3. Track C — The LLM "Compliance Gap"
-*   In closed-loop testing, the LLM customer was **unrealistically cooperative**. In baseline runs, the LLM completed the funnel without dropping. When the coach warning was enabled, completion rates hit **~100%**. 
-*   **Jury Takeaway:** Standard LLMs lack the inherent friction, attention span, and skepticism of real customers. Relying purely on cooperative agents overestimates coach effectiveness without physical calibration.
+* **Headline:** **0/3 → 2/3 online conversions, 0.00 annoyance.** Two winnable users retained online; the third (Judith) correctly *not* pushed — consistent with right-channel retention.
+* **Precision & robustness:** **1.00 abandon-precision**, **0% mis-routing across 6,000 noisy trajectories** (50% dropout + 50% spurious events), **0 engine crashes**.
+* **State-recovery:** windowed recovery on at-risk events **~58%, noise-invariant** (holds through a 50% data-loss stress test). Global per-persona recovery in the CSV is lower (0.24–0.50) — an artifact of the synthetic fixture's truth-labelling, not a coach failure.
+* **Tunable dial:** re-ranking the 25-point parameter grid on the **true full-engine surface** (noise band n ∈ {0.1, 0.2, 0.3}) yields a continuous precision/recall dial — precision-max (0.25, 0.25) → 61% recall / 1.0% annoyance; recommended knee (0.15, 0.20) → 78% / 1.8%; recall-max (0.10, 0.10) → 83% / 6.3%. We caught that our first proxy scorer rewarded the failure mode, discarded it, and re-ranked on the true surface. The sweep is **Leonardo-ready (SLURM array)** but runs deterministically in seconds locally.
+
+### Track C — The LLM "Compliance Gap"
+In closed-loop testing the LLM customer was unrealistically cooperative: baseline runs completed the funnel without dropping, and with the coach warning enabled completion hit **~100%**. **Jury takeaway:** standard LLMs lack the friction, attention span, and skepticism of real customers, so cooperative-agent evaluation *overestimates* coach effectiveness without physical calibration. This is the gap that motivates Track B's deterministic, behaviour-only design. *(Track C lane — see Track C analyze outputs.)*
 
 ---
 
 ## 🛠️ What Worked / What Didn't
 
 ### What Worked
-*   **Stat-Blind State Recovery:** In Track B, the belief vector successfully inferred Peter and Franz's states solely from non-labeled clickstream telemetry without reading segment tags.
-*   **Silence as an Active Action:** Setting high threshold gates for the Bayesian policy ensured a **0.00 annoyance rate**. The coach remained silent for Franz on normal steps and only intervened when pricing anomalies hit.
-*   **The Handoff Paradigm:** Treating a human advisor handoff as a successful retention path (routing Peter to a human rather than forcing him to buy online) dramatically improved user trust.
+* **(C) A real, falsifiable finding:** the Compliance Gap is the kind of negative result that makes the rest of the work honest — we know *not* to trust raw LLM-in-the-loop completion numbers.
+* **(A) Physical telemetry beats prompt-telemetry:** Playwright-generated mouse/hover/dwell gave the only non-circular behaviour signal.
+* **(B) Stat-blind state recovery + silence as an action:** the coach inferred Peter's and Franz's states from non-labelled clickstream alone (the wall held), and high policy thresholds delivered a **0.00 annoyance rate**.
+* **(B) Right-channel retention:** Peter kept online by *simplifying*; Judith *left alone* because her path is the advisor — online conversion credited only on genuine online completion, never on a forced or handed-off outcome.
 
 ### What Didn't
-*   **LLM Micro-Behavior Limitations:** LLMs cannot natively generate physical clickstream telemetry (mouse curves, hover ranges). Feeding telemetry directly from LLM prompts introduces extreme circularity. Telemetry must be generated by physical automation engines (like Playwright in Track A) or real browser logs.
-*   **Judith Recall Failure:** Track B's abandon-recall for Judith was 0.0. Her segment disengages quietly without showing active "abandoning" behaviors, causing her to bypass the Bayesian abandon state.
-*   **Model Circularity:** The personas and the Bayesian coach rules were authored by the same team. While the "stat-blind" constraint prevented direct label leaking, a subtle theoretical bias remains.
+* **(A/C) LLM micro-behaviour limits:** LLMs can't natively produce physical clickstream; feeding telemetry from prompts is circular. Signal must come from automation (Track A) or real logs.
+* **(B) Judith recall failure:** abandon-recall for Judith was **0.0** — her segment disengages quietly without active "abandoning" signals, so she bypasses the abandon state. An honest limitation, not patched over.
+* **(team) Model circularity:** personas and coach rules were authored by the same team. The stat-blind constraint prevents direct label leakage, but a theoretical bias remains. All results are model-level (synthetic), not real-user lift.
 
 ---
 
 ## 🔮 What We'd Do with Another 36 Hours
-1.  **Playwright Mouse Telemetry Injection:** Record physical human cursor movements on the React cloned app and merge them with sampled profiles to train the Bayesian likelihood matrix on real, non-synthetic human noise.
-2.  **Cluster-Variance Sweep on Leonardo:** Run SLURM parameter sweeps with $N$-jittered persona variations per segment to test if the coach handles *atypical* Franz personas correctly (learning the segment vs. memorizing the archetype).
-3.  **Calibrate Decision Boundaries:** Set LLM transition probabilities directly from actual UNIQA production logs rather than hand-tuned hypotheses.
+1. **(A→B) Real mouse telemetry:** record physical human cursor movement on the cloned funnel and train the Bayesian likelihood matrix on real, non-synthetic noise.
+2. **(B) Cluster-variance sweep on Leonardo:** SLURM sweeps with N-jittered persona variations per segment to test whether the coach handles *atypical* Franz personas (learning the segment vs. memorising the archetype).
+3. **(C→B) Calibrate from production logs:** set transition probabilities from real UNIQA funnel logs rather than hand-tuned hypotheses, and close the Judith abandon-recall gap with real quiet-disengagement signals.
 
 ---
 
 ## 📂 Credits, Dependencies & Navigation
 
-### Tech Stack & Libraries
-*   **Python Stack:** `numpy`, `pytest` (used for Track B Bayesian coach and robustness tests).
-*   **JavaScript Stack:** `React 19`, `Vite 8`, `lucide-react` (used for Track C funnel cloned app).
-*   **CLI Simulator:** Node.js, `dotenv` (used for Track C headless CLI agent).
-*   **Automation:** Playwright Chromium (used for Track A live mouse telemetry recording).
-*   **Foundation Models:** OpenAI `gpt-5.4-mini` (CLI agent logic & prompt expansion), Claude 3.5 (architecture review).
-*   **Dataset:** UNIQA segmentation survey (n=4,004), live funnel calculator capture (2026-05-13).
+**Tech stack.** Python (`numpy`, `pytest`) — Track B. React 19 / Vite 8 / `lucide-react` — Track C. Node.js + `dotenv` — Track C CLI. Playwright Chromium — Track A. Dataset: UNIQA segmentation survey + live funnel capture.
 
-### Key Code Files Map
-*   **Python Bayesian Coach:** [coach_engine.py](./simulators/TrackB/coach/coach_engine.py) (entry contract) | [estimator.py](./simulators/TrackB/coach/estimator.py) (Bayesian estimator) | [policy.py](./simulators/TrackB/coach/policy.py) (decision policy).
-*   **JS Cloned Funnel & React App:** [App.jsx](./simulators/TrackC/src/App.jsx) (web UI) | [FormFunnel.jsx](./simulators/TrackC/src/components/FormFunnel.jsx) (cloned form) | [form.js](./simulators/TrackC/src/logic/form.js) (funnel logic).
-*   **JS Headless Simulation Loop:** [funnelEngine.js](./simulators/TrackC/src/agent/funnelEngine.js) (agent funnel driver) | [coach.js](./simulators/TrackC/src/agent/coach.js) (opt-in JS warning coach).
+**Repository map.**
+```
+simulators/
+├── TrackA/   — synthetic reasoning generator + Playwright telemetry
+├── TrackB/   — stat-blind Bayesian coach (deterministic proof lane)
+└── TrackC/   — full closed-loop simulator + React funnel clone
+```
+
+**Key files.**
+* Track A: `simulators/TrackA/personas/` (reasoning + Playwright), `simulators/TrackA/ui/` (live helper).
+* Track B: `simulators/TrackB/coach/coach/coach_engine.py` · `estimator.py` · `policy.py` · `rank_full_engine.py`.
+* Track C: `simulators/TrackC/src/App.jsx` · `components/FormFunnel.jsx` · `logic/form.js` · `agent/funnelEngine.js` · `agent/coach.js`.
+
+**Reproduce the Track B headline in 3 lines.**
+```bash
+cd simulators/TrackB/coach
+python -m pytest tests/ -q      # invariants pass
+python eval_harness.py          # OFF 0/3 · ON 2/3 · annoyance 0.00
+python rank_full_engine.py      # the precision/recall dial
+```
