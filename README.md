@@ -2,6 +2,12 @@
 
 **Team:** Vladislav Dolgov · Vladyslav Shundryk · Manuel Pasieka
 
+> [!IMPORTANT]
+> ### 🏆 Jury & Hackathon Quick Links
+> To review our submissions immediately, please explore:
+> *   📖 **[Jury Technical Report (REPORT.md)](./REPORT.md)** — Honest engineering takeaways, 3-track metrics, and technical findings.
+> *   🔬 **[Drop-off Hypotheses (docs/hypotheses.md)](./docs/hypotheses.md)** — Signal-cause-intervention mappings for Judith, Franz, and Peter.
+
 ---
 
 ## Project Overview
