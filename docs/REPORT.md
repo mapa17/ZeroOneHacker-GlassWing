@@ -40,57 +40,54 @@
 
 ## ⏃ TIER 2: The Middle (3-Minute Narrative Pillars)
 
-We split our innovation into three parallel work streams (Tracks A, B, and C) to move from qualitative user reasoning to deterministic mathematical control, culminating in a full closed-loop simulation.
+We split our innovation into three parallel work streams (Tracks A, B, and C) starting from a shared base of demographic persona attributes and a cloned 9-step Privatarzt web funnel.
 
 ```mermaid
 graph TD
     %% Define Node Styles
     classDef main fill:#eef,stroke:#33f,stroke-width:2px;
-    classDef agent fill:#efe,stroke:#090,stroke-width:2px;
-    classDef coach fill:#fee,stroke:#b00,stroke-width:2px;
+    classDef trackA fill:#efe,stroke:#090,stroke-width:2px;
+    classDef trackB fill:#fee,stroke:#b00,stroke-width:2px;
+    classDef trackC fill:#e0f7fa,stroke:#00a8cc,stroke-width:2px;
     
-    %% The Flow
-    ProfileSampler[1. Persona Sampler] -->|Coherent Persona JSON| HeadlessAgent[2. Headless LLM Agent]
-    HeadlessAgent -->|Step Actions & Reasoning| WebFunnel[3. Cloned Web Funnel State Machine]
-    WebFunnel -->|Telemetry, Dwell & Selections| AdvisorClassifier[4. Bayesian Classifier]
-    AdvisorClassifier -->|State Estimation & Risks| CoachIntercept[5. Coach Intercept]
-    CoachIntercept -->|Opt-in Intervention Warning| HeadlessAgent
+    %% Shared Base
+    Base[Shared Base: 3 Persona Archetypes & 9-Step Funnel Logic]
+    
+    %% Track A
+    Base -->|Demographic Sampling & Playwright UI| TrackA[Track A: Synthetic Reasoning & Telemetry]
+    TrackA -->|Replay 50 Drop-offs| TrackAResults[~10% Purchase Completion / 33% Progressed Further]
+    
+    %% Track B
+    Base -->|Scripted Telemetry| TrackB[Track B: Python Bayesian State Estimator]
+    TrackB -->|Stat-blind Belief over 5 States| TrackBResults[0/3 to 2/3 Conversions / 0.00 Annoyance]
+    
+    %% Track C
+    Base -->|React Web App & CLI Agent Loop| TrackC[Track C: Full Closed-Loop Simulation]
+    TrackC -->|Deterministic Advisor Warning| TrackCResults[LLM Over-compliance / ~100% Completion]
     
     %% Apply Styles
-    class ProfileSampler,WebFunnel main;
-    class HeadlessAgent agent;
-    class AdvisorClassifier,CoachIntercept coach;
-    
-    %% Legends
-    subgraph Track A: User Reasoning
-    HeadlessAgent
-    end
-    subgraph Track B: State Control
-    AdvisorClassifier
-    end
-    subgraph Track C: Closed-Loop
-    ProfileSampler
-    WebFunnel
-    CoachIntercept
-    end
+    class Base main;
+    class TrackA,TrackAResults trackA;
+    class TrackB,TrackBResults trackB;
+    class TrackC,TrackCResults trackC;
 ```
 
 ### 🗂️ Track A: Synthetic User Reasoning & UI Telemetry
 *   **The Goal:** Predict drop-off moments before they occur by generating rich, qualitative, step-level explanation logs showing *why* a customer hesitates or drops out.
-*   **The Execution:** We built a prompt pipeline linking sampled user demographics (age, income, channel preference) directly to their interactive behaviors. Using Playwright, we automated real browser funnel click-throughs and recorded physical mouse/cursor movements, hovers, and dwell times.
-*   **Key Insight:** Qualitative hesitation (e.g., concerns about tariff price vs. benefits) precedes mechanical drops. Capturing these reasoning steps enables the generation of high-fidelity synthetic logs.
+*   **The Execution:** We built a prompt pipeline linking sampled user demographics (age, income, channel preference) directly to their interactive behaviors. Using Playwright, we automated real browser funnel click-throughs and recorded physical mouse/cursor movements, hovers, and dwell times. We implemented a live chat helper that reads active selections and page behavior to give targeted, contextual advice instead of generic system prompts.
+*   **Key Results:** Replaying **50 prior drop-offs** with the chat helper enabled successfully led to **~10% of users completing the purchase** and **a third progressing further** through the funnel than their baseline. The helper was highly effective at resolving early confusion, though it struggled when the main blocker was price or a desire to compare competitors.
 *   **Code Reference:** [Track A README](../simulators/TrackA/README.md)
 
-### 🗂️ Track B: Bayesian State Estimation & Handoff Control
-*   **The Goal:** Prevent expensive human advisor handoffs by building a deterministic, lightweight Python engine to estimate user risk and drop-off propensity solely from telemetry.
-*   **The Execution:** We implemented a behavior-only Bayesian state estimator that observes only non-labeled telemetry (dwell time, back-clicks, field hovers, and selections). The classifier determines whether the user is falling off the online funnel path into an `advisor_forward` (advisor consultation) state.
-*   **Key Insight:** The algorithm achieved **0% mis-routing across 6,000 simulated noisy trajectories** in validation runs. It proves that simple, non-invasive telemetry analysis is highly effective at identifying at-risk users without requiring personal PII.
+### 🗂️ Track B: Bayesian State Estimation & Handoff Control (Python Coach)
+*   **The Goal:** Build a deterministic, lightweight conversion coach that infers what *state* a user is in from their behavioral telemetry alone, and routes them correctly (convert, retain, hand to a human, or stay silent) without annoying them.
+*   **The Execution:** We implemented a behavior-only, stat-blind Bayesian state estimator that observes only non-labeled telemetry (dwell time, back-clicks, field hovers, and selections). It maintains a belief vector over 5 states (`orienting`, `evaluating`, `overwhelmed`, `ready`, `abandoning`). A transparent decision policy maps this belief to a response tier (`silent`, `ambient`, `inline`, `prompted`, `active`) with a mandatory human-readable reason.
+*   **Key Results:** Lifted script-driven persona completion from **0/3 to 2/3 at-risk users, at a 0.00 annoyance rate**. Franz (price-shock) was saved at the final price by triggering a `save_progress` prompt (not advisor routing, which his segment rejects). Peter (overwhelmed) was gracefully simplified and routed to a human advisor. Judith (won't convert online) was correctly left alone (silence as a designed choice). The estimator achieved an **abandon-precision of 1.00** and **0% mis-routing across 6,000 simulated noisy trajectories**.
 *   **Code Reference:** [Track B README](../simulators/TrackB/README.md)
 
-### 🗂️ Track C: Full Closed-Loop Evaluation & The Realism Benchmark
-*   **The Goal:** Run the complete end-to-end system in a closed-loop environment to measure if the AI coach actually shifts conversion rates compared to a baseline.
-*   **The Execution:** We created a React 19/Vite 8 clone of the 9-step UNIQA Privatarzt funnel and integrated it with a Node.js CLI agent simulator (`run-interactive-agent.mjs`). A deterministic coach observes the funnel state and intercepts users when they trigger an advisor handoff, prompting them to reconsider.
-*   **Key Discovery:** The **"Compliance Gap."** Without the coach, the LLM customer completed the funnel. With the coach active, the completion rate reached ~100%. While the coach performed perfectly technically, the LLM customer was *unrealistically compliant*, lacking the real-world friction, skepticism, and attention drop-offs of live customers.
+### 🗂️ Track C: Full Closed-Loop Evaluation & The Realism Benchmark (Vite/Node App)
+*   **The Goal:** Run the complete end-to-end system (simulated LLM customer, cloned web form, and coach warning) in a closed loop to measure if the coach actually shifts conversion rates compared to a baseline.
+*   **The Execution:** We built a React 19/Vite 8 clone of the 9-step UNIQA Privatarzt funnel integrated with a Node.js CLI agent simulator (`run-interactive-agent.mjs`) driven by Claude/GPT. A deterministic JavaScript coach observes the funnel state and intercepts the LLM customer with a warning banner when advisor-routing is triggered.
+*   **Key Discovery:** The **"Compliance Gap."** Without the coach, the LLM customer completed the funnel. With the coach active, the completion rate reached **~100%** (clearly unrealistic), showing that the simulated LLM customers are *too compliant* and easily nudged, lacking the real-world friction, skepticism, and attention drop-offs of live customers.
 *   **Code Reference:** [Track C README](../simulators/TrackC/README.md) | [Track C Realism Analysis](../simulators/TrackC/REALISM.md)
 
 ---
